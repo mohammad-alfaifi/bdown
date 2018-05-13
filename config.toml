@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Adjusted R"
+title = "Adjusted-R"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
