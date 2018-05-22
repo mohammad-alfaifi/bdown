@@ -23,14 +23,9 @@ theme = "hyde-hyde"
 
 ## Social Accounts
 [params.social]
-    github = "<username>"
-    instagram = "<username>"
-    xing = "<username>"
-    linkedin = "<username>"
-    twitter = "<username>"
-    facebook = "<username>"
-    stackoverflow = "<username>"
-    email = "your-email@example.com"
+    github = "https://github.com/mohammad-alfaifi/"
+    linkedin = "https://www.linkedin.com/in/mohammadalfaifi/"
+    twitter = "https://twitter.com/alfaifi_moh"
 
 ## Main Menu
 [[menu.main]]
