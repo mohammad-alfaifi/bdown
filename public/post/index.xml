@@ -6,6 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 10 May 2018 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Merge Operations in R</title>
       <link>/post/merge_in_r/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 May 2018 21:48:51 -0700</pubDate>
       
       <guid>/post/merge_in_r/</guid>
       <description>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R The merge operations is well explained in Pandas documentation for Python but I could not find any documentation that is as good for R. Hence, I am writing this blog :)

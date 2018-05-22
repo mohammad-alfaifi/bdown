@@ -1,6 +1,7 @@
 ---
 title: "Merge Operations in R"
 output: html_document
+date: "2018-05-10T21:48:51-07:00"
 
 ---
 
@@ -40,15 +41,17 @@ Before jumping to merging these two data frames, we can consider adding one data
 ## Row Binding
 
 
-The **rbind** function appends the *rows* of  a data frame to another data frame (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an  error:
+The **rbind** function appends the *rows* from one data frame to another (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an  error:
 
 
 ```{r message=TRUE, warning=FALSE, paged.print=FALSE}
 # df1 and df2 have different column names
 
 #df3 <- rbind(df1,df2)
-```
 
+#Error in match.names(clabs, names(xi)) : names do not match previous names
+
+```
 
 However, if we try to bind df1 to another data frame which has the same column names or  itself, we get the following result
 
@@ -61,25 +64,14 @@ rbind(df1,df1)
 
 ##Column Binding
 
-The **cbind** append a data frame with the columns of another data frame ('c' stands for column). This operation does not require the same column names. However, it requires that both data frames must have the same number of row, otherwise, we will get this error:
+The **cbind** appends  columns from one data frame to another ('c' stands for column). This operation does not require the same column names. However, it requires that both data frames have the same number of row, otherwise, we will get this error:
 ```{r}
 #cbind(df1,df2[1:2,])
+#Error in data.frame(..., check.names = FALSE) : arguments imply differing number of rows: 3, 2
 ```
 
-
-Error in data.frame(..., check.names = FALSE): arguments imply differing number of rows: 3, 2
-Traceback:
-
-1. cbind(df1, df2[1:2, ])
-2. cbind(deparse.level, ...)
-3. data.frame(..., check.names = FALSE)
-4. stop(gettextf("arguments imply differing number of rows: %s", 
- .     paste(unique(nrows), collapse = ", ")), domain = NA)
- 
- 
  
  However, when the number of rows in both data frames is the same, here is the result
- 
  
 ```{r}
 cbind(df1,df2)
@@ -88,15 +80,15 @@ cbind(df1,df2)
  
 ## Summary of row and column binding in R
 
-1- **rbind** appends the rows  of a data frame to another. It requires that both data frames have the same column names
+1- **rbind** appends the rows  from one  data frame to another. It requires that both data frames have the same column names
 
-2- **cbind** appends the columns of one data frame to another and it requires that both data frames have the same number of rows
+2- **cbind** appends the columns from one data frame to another, and it requires that both data frames have the same number of rows
 
-Let's say that you want to bind two data frames which have either different column names or different row numbers, how can we do it? This is when merging operation comes to play. 
+Let's say that we want to bind two data frames which have either different column names or different row numbers, how can we do it? This is when merging operation comes to play. 
 
 ## Outter Join (full)
 
-let's say we want to append the following rows of df1 to df2, we can only do it using outer join
+let's say we want to append the following rows from df1 to df2, we can only do it using outer join
 
 ```{r}
 #only the fist and second rows of df2
@@ -107,15 +99,15 @@ df1
 merge(df1,df2[1:2,],all=T,by=NULL)
 ```
 
-However, you can see that there is redundant information. If we are to use the 'country' column as a key or an identifier for both data frames, then, we eliminate this redundancy and have this neat output. 
+However, you can see that there is redundant information. We can eliminate this redundancy by using  the 'country' column as a key or an identifier for both data frames, then, we  have this neat output. 
 
 ```{r}
 merge(df1,df2[1:2,],all=T, by='Country') # this is equilvant to merge(df1,df2[1:2,],all=T)
 ```
 
-The first value for the population of New Zealand is given 'NA' value since we only used only the first and second rows of df2 and these two rows don't have New Zealand.
+*The first value for the population of New Zealand is given 'NA' value since we only used only the first and second rows of df2 and these two rows don't have New Zealand.*
 
-*In short, the outer join when used with a key, it shows the union of both data frames.*
+**In short, the outer join when used with a key, it returns the union of both data frames.**
 
 ## Inner Join
 
@@ -136,12 +128,16 @@ merge(df1,df2[1:2,],all=F, by='Country') # this equivlant to merge(df1,df2[1:2,]
 
 3- The inner join is the default if no argument other than the data frames is provided
 
-4- if no column name(s) are provided in the 'by' argument, then the column name(s) which are the same in both data frames are to be used
+4- if no column name(s) are provided in the 'by' argument, then the column names which are the same in both data frames are to be used as keys
 
 ## Left and Right Join
 The left join is a type of outer join. However, it uses only the keys or identifiers from the left table only (first table in the argument). Hence, it outputs the entire left table and replaces the missing values from the right table with 'NA' or omit them if they do not correspond to any values in the key(s) column(s).   
 ```{r}
+
+#using df1 as the left table
 merge(df1,df2[1:2,],all.x=T, by='Country') # replaces the missing values with NA for the right table
+#using df2 as the left table
+
 merge(df2[1:2,],df1,all.x=T, by='Country') # ommit New Zealand entries since New Zealand does not exist 
                                             #in the country column of the left table  
 
@@ -156,4 +152,16 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 ```
 
 
+
+## Summary for Left and Right Join
+
+1- The left join refers to the first table or data frame used in the argument of the merge function.
+
+2- The left join means that the keys from the first table are to be used
+
+3- The right join is the same as the left join; however, it refers to second table or data frame used in the  argument of the merge function
+
+4- In the case of the right join,  the keys from the second table or data frame are to be used  
+
+If you have any suggestion or comments about this post, please let me know!
 

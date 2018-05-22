@@ -63,30 +63,20 @@
         <p>
 		<section class="row text-center">
 	
-	<a href="https://twitter.com/%3cusername%3e"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://facebook.com/%3cusername%3e"><i class="fab fa-facebook-f"></i></a>
-	
-	
-	&nbsp;<a href="https://github.com/%3cusername%3e"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/https://twitter.com/alfaifi_moh"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
 	
 	
 	
-	&nbsp;<a href="https://instagram.com/%3cusername%3e"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://linkedin.com/in/%3cusername%3e"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://stackoverflow.com/users/%3cusername%3e"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	&nbsp;<a href="https://github.com/https://github.com/mohammad-alfaifi/"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 	
 	
 	
-	&nbsp;<a href="https://www.xing.com/profile/%3cusername%3e"><i class="fab fa-xing fa-lg" aria-hidden="true"></i></a>
+	
+	&nbsp;<a href="https://linkedin.com/in/https://www.linkedin.com/in/mohammadalfaifi/"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
 	
 	
-	&nbsp;<a href="mailto:your-email@example.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+	
 	
 </section>
 
@@ -107,7 +97,8 @@
   <div class="col-sm-12 col-md-12">
     <span class="text-left post-date meta">
             
-      
+       
+        <i class="fas fa-calendar-alt"></i> May 10, 2018
       
       
       
@@ -139,10 +130,12 @@ df2&lt;-data.frame(Country=c(&#39;US&#39;,&#39;UK&#39;,&quot;New Zealand&quot;),
 <p>Before jumping to merging these two data frames, we can consider adding one data frame to another. This process is called <strong>binding</strong> in R, while it is called <strong>concatenating</strong> in Python. There are two types of binding: row binding (rbind function) and column binding (cbind function).</p>
 <div id="row-binding" class="section level2">
 <h2>Row Binding</h2>
-<p>The <strong>rbind</strong> function appends the <em>rows</em> of a data frame to another data frame (hence the letter ‘r’ before ‘bind’). However, for this process to work, both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an error:</p>
+<p>The <strong>rbind</strong> function appends the <em>rows</em> from one data frame to another (hence the letter ‘r’ before ‘bind’). However, for this process to work, both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an error:</p>
 <pre class="r"><code># df1 and df2 have different column names
 
-#df3 &lt;- rbind(df1,df2)</code></pre>
+#df3 &lt;- rbind(df1,df2)
+
+#Error in match.names(clabs, names(xi)) : names do not match previous names</code></pre>
 <p>However, if we try to bind df1 to another data frame which has the same column names or itself, we get the following result</p>
 <pre class="r"><code>#rbind of data frames with the same coulmn names
 rbind(df1,df1)</code></pre>
@@ -156,15 +149,9 @@ rbind(df1,df1)</code></pre>
 </div>
 <div id="column-binding" class="section level2">
 <h2>Column Binding</h2>
-<p>The <strong>cbind</strong> append a data frame with the columns of another data frame (‘c’ stands for column). This operation does not require the same column names. However, it requires that both data frames must have the same number of row, otherwise, we will get this error:</p>
-<pre class="r"><code>#cbind(df1,df2[1:2,])</code></pre>
-<p>Error in data.frame(…, check.names = FALSE): arguments imply differing number of rows: 3, 2 Traceback:</p>
-<ol style="list-style-type: decimal">
-<li>cbind(df1, df2[1:2, ])</li>
-<li>cbind(deparse.level, …)</li>
-<li>data.frame(…, check.names = FALSE)</li>
-<li>stop(gettextf(“arguments imply differing number of rows: %s”, . paste(unique(nrows), collapse = “,”)), domain = NA)</li>
-</ol>
+<p>The <strong>cbind</strong> appends columns from one data frame to another (‘c’ stands for column). This operation does not require the same column names. However, it requires that both data frames have the same number of row, otherwise, we will get this error:</p>
+<pre class="r"><code>#cbind(df1,df2[1:2,])
+#Error in data.frame(..., check.names = FALSE) : arguments imply differing number of rows: 3, 2</code></pre>
 <p>However, when the number of rows in both data frames is the same, here is the result</p>
 <pre class="r"><code>cbind(df1,df2)</code></pre>
 <pre><code>##       Country Rank     Country Population
@@ -174,13 +161,13 @@ rbind(df1,df1)</code></pre>
 </div>
 <div id="summary-of-row-and-column-binding-in-r" class="section level2">
 <h2>Summary of row and column binding in R</h2>
-<p>1- <strong>rbind</strong> appends the rows of a data frame to another. It requires that both data frames have the same column names</p>
-<p>2- <strong>cbind</strong> appends the columns of one data frame to another and it requires that both data frames have the same number of rows</p>
-<p>Let’s say that you want to bind two data frames which have either different column names or different row numbers, how can we do it? This is when merging operation comes to play.</p>
+<p>1- <strong>rbind</strong> appends the rows from one data frame to another. It requires that both data frames have the same column names</p>
+<p>2- <strong>cbind</strong> appends the columns from one data frame to another, and it requires that both data frames have the same number of rows</p>
+<p>Let’s say that we want to bind two data frames which have either different column names or different row numbers, how can we do it? This is when merging operation comes to play.</p>
 </div>
 <div id="outter-join-full" class="section level2">
 <h2>Outter Join (full)</h2>
-<p>let’s say we want to append the following rows of df1 to df2, we can only do it using outer join</p>
+<p>let’s say we want to append the following rows from df1 to df2, we can only do it using outer join</p>
 <pre class="r"><code>#only the fist and second rows of df2
 df2[1:2,]</code></pre>
 <pre><code>##   Country Population
@@ -199,14 +186,14 @@ df2[1:2,]</code></pre>
 ## 4          US    1        UK         80
 ## 5          UK    2        UK         80
 ## 6 New Zealand    3        UK         80</code></pre>
-<p>However, you can see that there is redundant information. If we are to use the ‘country’ column as a key or an identifier for both data frames, then, we eliminate this redundancy and have this neat output.</p>
+<p>However, you can see that there is redundant information. We can eliminate this redundancy by using the ‘country’ column as a key or an identifier for both data frames, then, we have this neat output.</p>
 <pre class="r"><code>merge(df1,df2[1:2,],all=T, by=&#39;Country&#39;) # this is equilvant to merge(df1,df2[1:2,],all=T)</code></pre>
 <pre><code>##       Country Rank Population
 ## 1 New Zealand    3         NA
 ## 2          UK    2         80
 ## 3          US    1        300</code></pre>
-<p>The first value for the population of New Zealand is given ‘NA’ value since we only used only the first and second rows of df2 and these two rows don’t have New Zealand.</p>
-<p><em>In short, the outer join when used with a key, it shows the union of both data frames.</em></p>
+<p><em>The first value for the population of New Zealand is given ‘NA’ value since we only used only the first and second rows of df2 and these two rows don’t have New Zealand.</em></p>
+<p><strong>In short, the outer join when used with a key, it returns the union of both data frames.</strong></p>
 </div>
 <div id="inner-join" class="section level2">
 <h2>Inner Join</h2>
@@ -221,17 +208,20 @@ df2[1:2,]</code></pre>
 <p>1- The outer join outputs the union of two data frames</p>
 <p>2- the inner join outputs the intersection of two data frames</p>
 <p>3- The inner join is the default if no argument other than the data frames is provided</p>
-<p>4- if no column name(s) are provided in the ‘by’ argument, then the column name(s) which are the same in both data frames are to be used</p>
+<p>4- if no column name(s) are provided in the ‘by’ argument, then the column names which are the same in both data frames are to be used as keys</p>
 </div>
 <div id="left-and-right-join" class="section level2">
 <h2>Left and Right Join</h2>
 <p>The left join is a type of outer join. However, it uses only the keys or identifiers from the left table only (first table in the argument). Hence, it outputs the entire left table and replaces the missing values from the right table with ‘NA’ or omit them if they do not correspond to any values in the key(s) column(s).</p>
-<pre class="r"><code>merge(df1,df2[1:2,],all.x=T, by=&#39;Country&#39;) # replaces the missing values with NA for the right table</code></pre>
+<pre class="r"><code>#using df1 as the left table
+merge(df1,df2[1:2,],all.x=T, by=&#39;Country&#39;) # replaces the missing values with NA for the right table</code></pre>
 <pre><code>##       Country Rank Population
 ## 1 New Zealand    3         NA
 ## 2          UK    2         80
 ## 3          US    1        300</code></pre>
-<pre class="r"><code>merge(df2[1:2,],df1,all.x=T, by=&#39;Country&#39;) # ommit New Zealand entries since New Zealand does not exist </code></pre>
+<pre class="r"><code>#using df2 as the left table
+
+merge(df2[1:2,],df1,all.x=T, by=&#39;Country&#39;) # ommit New Zealand entries since New Zealand does not exist </code></pre>
 <pre><code>##   Country Population Rank
 ## 1      UK         80    2
 ## 2      US        300    1</code></pre>
@@ -247,6 +237,14 @@ merge(df2[1:2,],df1,all.y=T, by=&#39;Country&#39;)  # replaces the missing value
 ## 1 New Zealand         NA    3
 ## 2          UK         80    2
 ## 3          US        300    1</code></pre>
+</div>
+<div id="summary-for-left-and-right-join" class="section level2">
+<h2>Summary for Left and Right Join</h2>
+<p>1- The left join refers to the first table or data frame used in the argument of the merge function.</p>
+<p>2- The left join means that the keys from the first table are to be used</p>
+<p>3- The right join is the same as the left join; however, it refers to second table or data frame used in the argument of the merge function</p>
+<p>4- In the case of the right join, the keys from the second table or data frame are to be used</p>
+<p>If you have any suggestion or comments about this post, please let me know!</p>
 </div>
 </div>
 
