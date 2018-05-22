@@ -1,6 +1,7 @@
 ---
 title: "Merge Operations in R"
 output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +14,7 @@ knitr::opts_chunk$set(
 # Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R
 
 
-The merge operations is well explained in the Pandas documentation which can be found <a href="https://pandas.pydata.org/pandas-docs/stable/merging.html">here</a> . However, I could not find any documentation that is as good as  Panda's for R. Hence, I have decided to blog about it. 
+The merge operations is well explained in Pandas documentation for Python but  I could not find any documentation that is as good for R. Hence, I am writing this blog :) 
 
 
 Let's say we have these two data frames 
@@ -39,19 +40,18 @@ Before jumping to merging these two data frames, we can consider adding one data
 ## Row Binding
 
 
-The **rbind** function appends the *rows* of  a data frame to another data frame (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frame must have the same names; otherwise, we will get the following error:
+The **rbind** function appends the *rows* of  a data frame to another data frame (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an  error:
 
 
-```{r}
+```{r message=TRUE, warning=FALSE, paged.print=FALSE}
 # df1 and df2 have different column names
 
 #df3 <- rbind(df1,df2)
 ```
-We get this error message:
 
-Error in match.names(clabs, names(xi)) : names do not match previous names
 
 However, if we try to bind df1 to another data frame which has the same column names or  itself, we get the following result
+
 
 ```{r}
 #rbind of data frames with the same coulmn names

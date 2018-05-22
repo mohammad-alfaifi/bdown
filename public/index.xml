@@ -17,9 +17,7 @@
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R The merge operations is well explained in the Pandas documentation which can be found here . However, I could not find any documentation that is as good as Pandas&amp;rsquo;s for R. Hence, I have decided to blog about it.
-Let&amp;rsquo;s say we have these two dataframes
-#import libraries library(&#39;data.table&#39;) df1&amp;lt;-data.frame(Country=c(&#39;US&#39;,&#39;UK&#39;,&amp;quot;New Zealand&amp;quot;),Rank =c(1,2,3)) df2&amp;lt;-data.frame(Country=c(&#39;US&#39;,&#39;UK&#39;,&amp;quot;New Zealand&amp;quot;),Population =c(300,80,4))  Before jumping to merging these two data frames, we can consider adding one data frame to another.</description>
+      <description>I am passionate about data and quantitative analysis. I write about data cleansing, manipulation and analysis using R and Python programming languages. I write to learn, understand and give back to the community.</description>
     </item>
     
     <item>
@@ -28,7 +26,7 @@ Let&amp;rsquo;s say we have these two dataframes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/post/merge_in_r/</guid>
-      <description>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R The merge operations is well explained in the Pandas documentation which can be found here . However, I could not find any documentation that is as good as Panda’s for R. Hence, I have decided to blog about it.
+      <description>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R The merge operations is well explained in Pandas documentation for Python but I could not find any documentation that is as good for R. Hence, I am writing this blog :)
 Let’s say we have these two data frames
 #import libraries library(&amp;#39;data.table&amp;#39;) df1&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Rank =c(1,2,3)) df2&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Population =c(300,80,4)) df1 ## Country Rank ## 1 US 1 ## 2 UK 2 ## 3 New Zealand 3 df2 ## Country Population ## 1 US 300 ## 2 UK 80 ## 3 New Zealand 4 Before jumping to merging these two data frames, we can consider adding one data frame to another.</description>
     </item>
