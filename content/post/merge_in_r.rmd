@@ -165,3 +165,6 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 
 If you have any suggestion or comments about this post, please let me know! 
 
+
+This site was built using [blogdown package](https://cran.r-project.org/web/packages/blogdown/index.html).
+
