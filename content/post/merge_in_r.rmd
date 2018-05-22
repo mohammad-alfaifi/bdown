@@ -1,6 +1,7 @@
 ---
 title: "Merge Operations in R"
 output: html_document
+date: "2018-05-10T21:48:51-07:00"
 
 ---
 
