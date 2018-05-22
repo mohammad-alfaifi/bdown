@@ -42,7 +42,7 @@ Before jumping to merging these two data frames, we can consider adding one data
 ## Row Binding
 
 
-The **rbind** function appends the *rows* from one data frame to another (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an  error:
+The **rbind** function appends the *rows* from one data frame to another (hence the letter 'r' before 'bind'). However, for this process to work,  both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will get an  error:
 
 
 ```{r message=TRUE, warning=FALSE, paged.print=FALSE}

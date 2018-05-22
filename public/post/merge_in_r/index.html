@@ -236,7 +236,7 @@ Let’s say we have these two data frames
 
 <meta itemprop="datePublished" content="2018-05-10T21:48:51-07:00" />
 <meta itemprop="dateModified" content="2018-05-10T21:48:51-07:00" />
-<meta itemprop="wordCount" content="1189">
+<meta itemprop="wordCount" content="1190">
 
 
 
@@ -286,7 +286,7 @@ df2&lt;-data.frame(Country=c(&#39;US&#39;,&#39;UK&#39;,&quot;New Zealand&quot;),
 <p>Before jumping to merging these two data frames, we can consider adding one data frame to another. This process is called <strong>binding</strong> in R, while it is called <strong>concatenating</strong> in Python. There are two types of binding: row binding (rbind function) and column binding (cbind function).</p>
 <div id="row-binding" class="section level2">
 <h2>Row Binding</h2>
-<p>The <strong>rbind</strong> function appends the <em>rows</em> from one data frame to another (hence the letter ‘r’ before ‘bind’). However, for this process to work, both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will an error:</p>
+<p>The <strong>rbind</strong> function appends the <em>rows</em> from one data frame to another (hence the letter ‘r’ before ‘bind’). However, for this process to work, both data frames must have the same number of columns and the columns in both data frames must have the same names; otherwise, we will get an error:</p>
 <pre class="r"><code># df1 and df2 have different column names
 
 #df3 &lt;- rbind(df1,df2)
