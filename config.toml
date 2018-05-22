@@ -1,40 +1,8 @@
-## Basic Configuration
-baseurl = ""
-languageCode = "en"
+name = "Adjusted-r"
+description = "Data Science with R and Python"
+homepage = "https://adjusted-r.com"
+min_version = 0.27
 
-theme = "after-dark"
-
-## Hugo Built-in Features
-# disqusShortname = "your-disqus-shortname"
-# googleAnalytics = "your-google-analytics-id"
-# enableRobotsTXT = true
-
-## Site Settings
-[params]
-    author = "Mohammad Alfaifi"
-    title = "Adjusted-R"
-     description = "Data Science with R and Python"
-    authorimage = "/img/hugo.png"
-    dateformat = "Jan 2, 2006"
-    highlightjs = true
-    # highlightjsstyle = "github"
-    # please choose either GraphComment or Disqus
-    # GraphCommentId = "your-graph-comment-id" 
-
-## Social Accounts
-[params.social]
-    github = "mohammad-alfaifi"
-    linkedin = "mohammadalfaifi/"
-    twitter = "alfaifi_moh"
-
-## Main Menu
-[[menu.main]]
-    name = "Posts"
-    weight = 100
-    identifier = "post"
-    url = "/post/"
-[[menu.main]]
-    name = "About"
-    identifier = "about"
-    weight = 200
-    url = "/about/"
+[author]
+  name = "Mohammad Alfaifi"
+  homepage = "adjusted-r.com"
