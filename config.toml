@@ -2,7 +2,7 @@
 baseurl = ""
 languageCode = "en"
 
-theme = "hyde-hyde"
+theme = "after-dark"
 
 ## Hugo Built-in Features
 # disqusShortname = "your-disqus-shortname"
