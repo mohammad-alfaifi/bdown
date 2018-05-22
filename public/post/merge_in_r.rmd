@@ -110,7 +110,7 @@ merge(df1,df2[1:2,],all=T, by='Country') # this is equilvant to merge(df1,df2[1:
 
 **In short, the outer join when used with a key, it returns the union of both data frames.**
 
-## Inner Join
+## Inner Join 
 
 The inner join is the opposite of outer join since its output is the intersection of both data frames. 
 The outer join operation replaces the unavailable values with 'NA' while the inner join does not include it at all.
