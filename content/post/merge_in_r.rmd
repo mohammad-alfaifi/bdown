@@ -163,5 +163,5 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 
 4- In the case of the right join,  the keys from the second table or data frame are to be used  
 
-If you have any suggestion or comments about this post, please let me know!
+If you have any suggestion or comments about this post, please let me know! 
 
