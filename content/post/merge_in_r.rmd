@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 # Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R
 
 
-The merge operations is well explained in the Pandas documentation which can be found <a href="https://pandas.pydata.org/pandas-docs/stable/merging.html">here</a> . However, I could not find any documentation that is as good as  Panda's for R. Hence, I have decided to blog about it. 
+The merge operations is well explained in Pandas documentation for Python but  I could not find any documentation that is as for R. Hence, I am writing this blog :) 
 
 
 Let's say we have these two data frames 
