@@ -164,7 +164,7 @@ rbind(df1,df1)</code></pre>
 </div>
 <div id="column-binding" class="section level2">
 <h2>Column Binding</h2>
-<p>The <strong>cbind</strong> appends columns from one data frame to another (‘c’ stands for column). This operation does not require the same column names. However, it requiresthat both data frames have the same number of row, otherwise, we will get this error:</p>
+<p>The <strong>cbind</strong> appends columns from one data frame to another (‘c’ stands for column). This operation does not require the same column names. However, it requires that both data frames have the same number of row, otherwise, we will get this error:</p>
 <pre class="r"><code>#cbind(df1,df2[1:2,])
 #Error in data.frame(..., check.names = FALSE) : arguments imply differing number of rows: 3, 2</code></pre>
 <p>However, when the number of rows in both data frames is the same, here is the result</p>
@@ -255,7 +255,7 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 </div>
 <div id="summary-for-left-and-right-koin" class="section level2">
 <h2>Summary for Left and Right Koin</h2>
-<p>1- The left join refers to the first table or data frame used in the arugment of the merge function. 2- The left join means that the keys from the first table are to be used 3- The right join is the same as the left join; however, it refers to second table or data frame used in the arugment of the merge function 4- In the case of the right join, the keys from the second table or data frame are to be used</p>
+<p>1- The left join refers to the first table or data frame used in the argument of the merge function. 2- The left join means that the keys from the first table are to be used 3- The right join is the same as the left join; however, it refers to second table or data frame used in the argument of the merge function 4- In the case of the right join, the keys from the second table or data frame are to be used</p>
 <p>If you have any suggestion or comments about this post, please let me know!</p>
 </div>
 </div>
