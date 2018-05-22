@@ -156,8 +156,11 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 ## Summary for Left and Right Koin
 
 1- The left join refers to the first table or data frame used in the argument of the merge function.
+
 2- The left join means that the keys from the first table are to be used
+
 3- The right join is the same as the left join; however, it refers to second table or data frame used in the  argument of the merge function
+
 4- In the case of the right join,  the keys from the second table or data frame are to be used  
 
 If you have any suggestion or comments about this post, please let me know!
