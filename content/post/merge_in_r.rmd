@@ -153,7 +153,7 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 
 
 
-## Summary for Left and Right Koin
+## Summary for Left and Right Join
 
 1- The left join refers to the first table or data frame used in the argument of the merge function.
 
