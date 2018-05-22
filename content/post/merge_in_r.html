@@ -68,7 +68,7 @@ rbind(df1,df1)</code></pre>
 <div id="outter-join-full" class="section level2">
 <h2>Outter Join (full)</h2>
 <p>let’s say we want to append the following rows from df1 to df2, we can only do it using outer join</p>
-<pre class="r"><code>#only the fist and second rows of df2
+<pre class="r"><code>#only the first and second rows of df2
 df2[1:2,]</code></pre>
 <pre><code>##   Country Population
 ## 1      US        300
@@ -92,7 +92,7 @@ df2[1:2,]</code></pre>
 ## 1 New Zealand    3         NA
 ## 2          UK    2         80
 ## 3          US    1        300</code></pre>
-<p><em>The first value for the population of New Zealand is given ‘NA’ value since we only used only the first and second rows of df2 and these two rows don’t have New Zealand.</em></p>
+<p><em>The first value for the population of New Zealand is given ‘NA’ value since we only used only the first and second rows of df2 and these two rows don’t have New Zealand. </em></p>
 <p><strong>In short, the outer join when used with a key, it returns the union of both data frames.</strong></p>
 </div>
 <div id="inner-join" class="section level2">

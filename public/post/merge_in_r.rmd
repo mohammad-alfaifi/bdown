@@ -92,7 +92,7 @@ Let's say that we want to bind two data frames which have either different colum
 let's say we want to append the following rows from df1 to df2, we can only do it using outer join
 
 ```{r}
-#only the fist and second rows of df2
+#only the first and second rows of df2
 df2[1:2,]
 df1
 ```
@@ -106,7 +106,7 @@ However, you can see that there is redundant information. We can eliminate this 
 merge(df1,df2[1:2,],all=T, by='Country') # this is equilvant to merge(df1,df2[1:2,],all=T)
 ```
 
-*The first value for the population of New Zealand is given 'NA' value since we only used only the first and second rows of df2 and these two rows don't have New Zealand.*
+*The first value for the population of New Zealand is given 'NA' value since we only used only the first and second rows of df2 and these two rows don't have New Zealand. *
 
 **In short, the outer join when used with a key, it returns the union of both data frames.**
 
