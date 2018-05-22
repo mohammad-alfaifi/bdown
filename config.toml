@@ -23,9 +23,9 @@ theme = "hyde-hyde"
 
 ## Social Accounts
 [params.social]
-    github = "https://github.com/mohammad-alfaifi/"
-    linkedin = "https://www.linkedin.com/in/mohammadalfaifi/"
-    twitter = "https://twitter.com/alfaifi_moh"
+    github = "mohammad-alfaifi"
+    linkedin = "mohammadalfaifi/"
+    twitter = "alfaifi_moh"
 
 ## Main Menu
 [[menu.main]]
