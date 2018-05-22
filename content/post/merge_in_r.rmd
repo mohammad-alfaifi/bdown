@@ -3,6 +3,7 @@ title: "Merge Operations in R"
 output: html_document
 date: "2018-05-10T21:48:51-07:00"
 category: 'R'
+author: 'Mohammad Alfaifi'
 ---
 
 ```{r setup, include=FALSE}
@@ -164,7 +165,4 @@ merge(df2[1:2,],df1,all.y=T, by='Country')  # replaces the missing values with N
 4- In the case of the right join,  the keys from the second table or data frame are to be used  
 
 If you have any suggestion or comments about this post, please let me know! 
-
-
-This site was built using [blogdown package](https://cran.r-project.org/web/packages/blogdown/index.html).
 
