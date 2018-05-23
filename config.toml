@@ -12,7 +12,7 @@ pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "disqus_Z7ozFSnuFz"
 
 [params]
     author = "Mohammad Alfaifi"
