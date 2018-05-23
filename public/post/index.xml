@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Data Science with R and Python</title>
-    <link>http://moh.netlify.com/posts/post/</link>
+    <link>http://moh.netlify.com/post/</link>
     <description>Recent content in Posts on Data Science with R and Python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 May 2018 21:48:51 -0700</lastBuildDate>
     
-	<atom:link href="http://moh.netlify.com/posts/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://moh.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Merge Operations in R</title>
-      <link>http://moh.netlify.com/posts/post/merge_in_r/</link>
+      <link>http://moh.netlify.com/post/merge_in_r/</link>
       <pubDate>Thu, 10 May 2018 21:48:51 -0700</pubDate>
       
-      <guid>http://moh.netlify.com/posts/post/merge_in_r/</guid>
+      <guid>http://moh.netlify.com/post/merge_in_r/</guid>
       <description>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R The merge operations is well explained in Pandas documentation for Python but I could not find any documentation that is as good for R. Hence, I am writing this blog :)
 Let’s say we have these two data frames
 #import libraries library(&amp;#39;data.table&amp;#39;) df1&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Rank =c(1,2,3)) df2&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Population =c(300,80,4)) df1 ## Country Rank ## 1 US 1 ## 2 UK 2 ## 3 New Zealand 3 df2 ## Country Population ## 1 US 300 ## 2 UK 80 ## 3 New Zealand 4 Before jumping to merging these two data frames, we can consider adding one data frame to another.</description>

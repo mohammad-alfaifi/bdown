@@ -3,34 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://moh.netlify.com/posts/post/merge_in_r/</loc>
+    <loc>http://moh.netlify.com/post/merge_in_r/</loc>
     <lastmod>2018-05-10T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://moh.netlify.com/posts/about/</loc>
+    <loc>http://moh.netlify.com/about/</loc>
     <lastmod>2018-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://moh.netlify.com/posts/categories/</loc>
+    <loc>http://moh.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://moh.netlify.com/posts/</loc>
+    <loc>http://moh.netlify.com/</loc>
     <lastmod>2018-05-10T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://moh.netlify.com/posts/post/</loc>
+    <loc>http://moh.netlify.com/post/</loc>
     <lastmod>2018-05-10T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://moh.netlify.com/posts/tags/</loc>
+    <loc>http://moh.netlify.com/tags/</loc>
     <priority>0</priority>
   </url>
   
