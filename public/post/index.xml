@@ -17,9 +17,9 @@
       <pubDate>Sun, 13 May 2018 21:48:51 -0700</pubDate>
       
       <guid>http://moh.netlify.com/post/two_func_data_vis/</guid>
-      <description>In my opinion, the two most important functions for data visualisation are Par and Pairs functions.
+      <description>In my opinion, the two most important functions for data visualisation in R are Par and Pairs functions.
 Par Function The first function is par function with mfrow parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window.
-Here is an example with IRIS dataset. First, loading and inspecting the dataset
+Below an example with IRIS dataset. First, loading and inspecting the dataset
 #import libraries library(datasets) #loading iris dataset data(iris) #The first six rows with the four columns head(iris) ## Sepal.</description>
     </item>
     

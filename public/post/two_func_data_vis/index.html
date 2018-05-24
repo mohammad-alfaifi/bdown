@@ -62,11 +62,11 @@
       <h1>The two most important functions for data visualisation in R</h1>
     </header>
 
-    <p>In my opinion, the two most important functions for data visualisation are <em>Par</em> and <em>Pairs</em> functions.</p>
+    <p>In my opinion, the two most important functions for data visualisation in R are <em>Par</em> and <em>Pairs</em> functions.</p>
 <div id="par-function" class="section level2">
 <h2>Par Function</h2>
 <p>The first function is <em>par</em> function with <em>mfrow</em> parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window.</p>
-<p>Here is an example with IRIS dataset. First, loading and inspecting the dataset</p>
+<p>Below an example with IRIS dataset. First, loading and inspecting the dataset</p>
 <pre class="r"><code>#import libraries
 
 library(datasets)
@@ -98,21 +98,21 @@ library(ggplot2)
 s&lt;-ggplot(iris,aes(x=Sepal.Length, y=Sepal.Width))+geom_point()
 s</code></pre>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Now, I would like to plot the petal length and width</p>
+<p>Now, plotting the petal length and width</p>
 <pre class="r"><code>p&lt;-ggplot(iris,aes(x=Petal.Length,y=Petal.Width))+geom_point()
 p</code></pre>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Now to compare both plots, I need to go back and forth between the two or I can use the par function with mfrow parameter, which allows me to display both plots side by side. Here is how it looks like</p>
+<p>Now to compare both plots, I need either to go back and forth between both plots or I can use the par function with mfrow parameter, which allows me to display both plots side by side as it is shown below</p>
 <pre class="r"><code>par(mfrow=c(1,2)) # 1 is the number of rows while two is the number of columns
 s # sepal length and width plot
 p # petal length and width plot</code></pre>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>We can change the number of rows and columns as we wish. Here is the same plots but using two rows and one column.</p>
+<p>We can change the number of rows and columns as we wish. Below is the same plots but using <em>two rows</em> and <em>one column</em>.</p>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="pairs-function" class="section level1">
 <h1>Pairs Function</h1>
-<p>The pairs function can be a very powerful tool for data exploration. Here is the iris dataset using pairs function.</p>
+<p>The pairs function can be a very powerful tool for data exploration. Below is the iris dataset plotted using pairs function.</p>
 <pre class="r"><code>pairs(iris)</code></pre>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>The pairs function can be used to show different types of plots (using the pch argument) and/or show only a subset of the dataset. Here is an example of plotting the iris dataset with the sepal length column lower than 6.</p>
@@ -121,6 +121,7 @@ p # petal length and width plot</code></pre>
 <p>Additionally, we can change the scale of the variables and plot them using only one line of code, which I found very useful when dealing with non-stationary data like the stock prices.</p>
 <pre class="r"><code>pairs(iris[1:4], log = &quot;xy&quot;,pch=21, bg = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)[unclass(iris$Species)]) </code></pre>
 <p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>By the way, the Sepal.Length is the x-axis for each plot that it below the text plot ‘Sepal.Length’ and it is the y-axis for each plot that it is on the right of the text plot.</p>
 <p>This was it. If you have any suggestion or comments about this post, please let me know!</p>
 </div>
 

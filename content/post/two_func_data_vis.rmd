@@ -16,12 +16,12 @@ knitr::opts_chunk$set(
 ```
 
 
-In my opinion, the two most important functions for data visualisation are *Par* and *Pairs* functions.
+In my opinion, the two most important functions for data visualisation in R are *Par* and *Pairs* functions.
 
 ## Par Function
 The first function is *par* function with *mfrow* parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window. 
 
-Here is an example with IRIS dataset. First, loading and inspecting the dataset 
+Below an example with IRIS dataset. First, loading and inspecting the dataset 
 
 ```{r}
 #import libraries
@@ -54,13 +54,13 @@ s
 
 ```
 
-Now,  I would like to plot the petal length and width
+Now, plotting the petal length and width
 ```{r}
 p<-ggplot(iris,aes(x=Petal.Length,y=Petal.Width))+geom_point()
 p
 ```
 
-Now to compare both plots, I need  to go back and forth between the two or I can use the par function with mfrow parameter, which allows me to display both plots  side by side. Here is how it looks like
+Now to compare both plots, I need either to go back and forth between both plots or I can use the par function with mfrow parameter, which allows me to display both plots  side by side as it is shown below  
 
 ```{r eval=F}
 par(mfrow=c(1,2)) # 1 is the number of rows while two is the number of columns
@@ -104,7 +104,7 @@ multiplot(s, p, cols=2)
 
 ```
 
-We can change the number of rows and columns as we wish. Here is the same plots but using two rows and one column. 
+We can change the number of rows and columns as we wish. Below is the same plots but using *two rows* and *one column*. 
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
@@ -114,7 +114,7 @@ multiplot(s, p, cols=1)
 
 # Pairs Function
 
-The pairs function can be a very powerful tool for data exploration. Here is the iris dataset using pairs function.
+The pairs function can be a very powerful tool for data exploration. Below is the iris dataset plotted using pairs function.
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 pairs(iris)
@@ -133,6 +133,9 @@ Additionally, we can change the scale of the variables and plot them using only 
 pairs(iris[1:4], log = "xy",pch=21, bg = c("red", "green", "blue")[unclass(iris$Species)]) 
 
 ```
+
+By the way, the Sepal.Length is the x-axis for each plot that it below the text plot 'Sepal.Length' and it is the y-axis for each plot that it is on the right of the text plot. 
+
 
 
 This was it. If you have any suggestion or comments about this post, please let me know! 
