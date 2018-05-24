@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://moh.netlify.com/post/two_func_data_vis/</loc>
+    <lastmod>2018-05-13T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://moh.netlify.com/post/merge_in_r/</loc>
     <lastmod>2018-05-10T21:48:51-07:00</lastmod>
   </url>
@@ -19,13 +24,13 @@
   
   <url>
     <loc>http://moh.netlify.com/</loc>
-    <lastmod>2018-05-10T21:48:51-07:00</lastmod>
+    <lastmod>2018-05-13T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://moh.netlify.com/post/</loc>
-    <lastmod>2018-05-10T21:48:51-07:00</lastmod>
+    <lastmod>2018-05-13T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
   

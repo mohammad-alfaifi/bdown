@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohammad Alfaifi">
+    <meta name="description" content="JData Science with R and Python">
+    <meta name="keywords" content="data science, R, Python, Time Series, Machine Learning">
+
+    <base href="http://moh.netlify.com/">
+    <title>
+  The two most important functions for data visualisation in R · Data Science with R and Python
+</title>
+
+    <link rel="canonical" href="http://moh.netlify.com/post/two_func_data_vis/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="http://moh.netlify.com/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="http://moh.netlify.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://moh.netlify.com/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.2" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://moh.netlify.com/">
+      Data Science with R and Python
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="http://moh.netlify.com/post/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="http://moh.netlify.com/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>The two most important functions for data visualisation in R</h1>
+    </header>
+
+    <p>In my opinion, the two most important functions for data visualisation are <em>Par</em> and <em>Pairs</em> functions.</p>
+<div id="par-function" class="section level2">
+<h2>Par Function</h2>
+<p>The first function is <em>par</em> function with <em>mfrow</em> parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window.</p>
+<p>Here is an example with IRIS dataset. First, loading and inspecting the dataset</p>
+<pre class="r"><code>#import libraries
+
+library(datasets)
+#loading iris dataset
+data(iris)
+#The first six rows with the four columns
+head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<pre class="r"><code>#plotting the different types of Species
+#checking the class of the column
+class(iris$Species)</code></pre>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+<pre class="r"><code>#since it is a factor, its levels can be used to show the unique Species
+levels(iris$Species) # there are three types: setosa, versicolor and virginica</code></pre>
+<pre><code>## [1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot;</code></pre>
+<p>Next, plotting the scatter plot of the sepal length and width using GGplot2.</p>
+<pre class="r"><code>#import libraries
+
+library(ggplot2)
+
+# plotting sepal length and width as scatter plot
+
+s&lt;-ggplot(iris,aes(x=Sepal.Length, y=Sepal.Width))+geom_point()
+s</code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Now, I would like to plot the petal length and width</p>
+<pre class="r"><code>p&lt;-ggplot(iris,aes(x=Petal.Length,y=Petal.Width))+geom_point()
+p</code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Now to compare both plots, I need to go back and forth between the two or I can use the par function with mfrow parameter, which allows me to display both plots side by side. Here is how it looks like</p>
+<pre class="r"><code>par(mfrow=c(1,2)) # 1 is the number of rows while two is the number of columns
+s # sepal length and width plot
+p # petal length and width plot</code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>We can change the number of rows and columns as we wish. Here is the same plots but using two rows and one column.</p>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="pairs-function" class="section level1">
+<h1>Pairs Function</h1>
+<p>The pairs function can be a very powerful tool for data exploration. Here is the iris dataset using pairs function.</p>
+<pre class="r"><code>pairs(iris)</code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The pairs function can be used to show different types of plots (using the pch argument) and/or show only a subset of the dataset. Here is an example of plotting the iris dataset with the sepal length column lower than 6.</p>
+<pre class="r"><code>pairs(iris, subset=&#39;Sepal.Length&#39;&lt;6 ,data=iris, pch=8)</code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Additionally, we can change the scale of the variables and plot them using only one line of code, which I found very useful when dealing with non-stationary data like the stock prices.</p>
+<pre class="r"><code>pairs(iris[1:4], log = &quot;xy&quot;,pch=21, bg = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)[unclass(iris$Species)]) </code></pre>
+<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>This was it. If you have any suggestion or comments about this post, please let me know!</p>
+</div>
+
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

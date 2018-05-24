@@ -1,5 +1,5 @@
 ---
-title: "Merge Operations in R"
+title: "Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R"
 output: html_document
 date: "2018-05-10T21:48:51-07:00"
 category: 'R'
@@ -13,8 +13,6 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ```
-# Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R
-
 
 The merge operations is well explained in Pandas documentation for Python but  I could not find any documentation that is as good for R. Hence, I am writing this blog :) 
 

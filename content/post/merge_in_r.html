@@ -1,5 +1,5 @@
 ---
-title: "Merge Operations in R"
+title: "Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R"
 output: html_document
 date: "2018-05-10T21:48:51-07:00"
 category: 'R'
@@ -8,8 +8,6 @@ author: 'Mohammad Alfaifi'
 
 
 
-<div id="inner-join-outter-join-left-join-right-join-row-bind-column-bind-in-r" class="section level1">
-<h1>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</h1>
 <p>The merge operations is well explained in Pandas documentation for Python but I could not find any documentation that is as good for R. Hence, I am writing this blog :)</p>
 <p>Let’s say we have these two data frames</p>
 <pre class="r"><code>#import libraries
@@ -145,5 +143,4 @@ merge(df2[1:2,],df1,all.y=T, by=&#39;Country&#39;)  # replaces the missing value
 <p>3- The right join is the same as the left join; however, it refers to second table or data frame used in the argument of the merge function</p>
 <p>4- In the case of the right join, the keys from the second table or data frame are to be used</p>
 <p>If you have any suggestion or comments about this post, please let me know!</p>
-</div>
 </div>
