@@ -9,21 +9,21 @@
     <meta name="description" content="JData Science with R and Python">
     <meta name="keywords" content="data science, R, Python, Time Series, Machine Learning">
 
-    <base href="http://moh.netlify.com/">
+    <base href="http://adjusted-r.netlify.com/">
     <title>
   The two most important functions for data visualisation in R · Data Science with R and Python
 </title>
 
-    <link rel="canonical" href="http://moh.netlify.com/post/two_func_data_vis/">
+    <link rel="canonical" href="http://adjusted-r.netlify.com/post/two_func_data_vis/">
 
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="http://moh.netlify.com/css/style.min.css">
+    <link rel="stylesheet" href="http://adjusted-r.netlify.com/css/style.min.css">
 
     
 
-    <link rel="icon" type="image/png" href="http://moh.netlify.com/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://moh.netlify.com/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://adjusted-r.netlify.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://adjusted-r.netlify.com/images/favicon-16x16.png" sizes="16x16">
 
     
 
@@ -34,18 +34,18 @@
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="http://moh.netlify.com/">
+    <a class="navigation-title" href="http://adjusted-r.netlify.com/">
       Data Science with R and Python
     </a>
     
     <ul class="navigation-list float-right">
       
       <li class="navigation-item">
-        <a class="navigation-link" href="http://moh.netlify.com/post/">Blog</a>
+        <a class="navigation-link" href="http://adjusted-r.netlify.com/post/">Blog</a>
       </li>
       
       <li class="navigation-item">
-        <a class="navigation-link" href="http://moh.netlify.com/about/">About</a>
+        <a class="navigation-link" href="http://adjusted-r.netlify.com/about/">About</a>
       </li>
       
     </ul>
@@ -97,30 +97,30 @@ library(ggplot2)
 
 s&lt;-ggplot(iris,aes(x=Sepal.Length, y=Sepal.Width))+geom_point()
 s</code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Now, plotting the petal length and width</p>
 <pre class="r"><code>p&lt;-ggplot(iris,aes(x=Petal.Length,y=Petal.Width))+geom_point()
 p</code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Now to compare both plots, I need either to go back and forth between both plots or I can use the par function with mfrow parameter, which allows me to display both plots side by side as it is shown below</p>
 <pre class="r"><code>par(mfrow=c(1,2)) # 1 is the number of rows while two is the number of columns
 s # sepal length and width plot
 p # petal length and width plot</code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>We can change the number of rows and columns as we wish. Below is the same plots but using <em>two rows</em> and <em>one column</em>.</p>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="pairs-function" class="section level1">
 <h1>Pairs Function</h1>
 <p>The pairs function can be a very powerful tool for data exploration. Below is the iris dataset plotted using pairs function.</p>
 <pre class="r"><code>pairs(iris)</code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>The pairs function can be used to show different types of plots (using the pch argument) and/or show only a subset of the dataset. Here is an example of plotting the iris dataset with the sepal length column lower than 6.</p>
 <pre class="r"><code>pairs(iris, subset=&#39;Sepal.Length&#39;&lt;6 ,data=iris, pch=8)</code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>Additionally, we can change the scale of the variables and plot them using only one line of code, which I find it very useful when dealing with non-stationary data like the financial data.</p>
 <pre class="r"><code>pairs(iris[1:4], log = &quot;xy&quot;,pch=21, bg = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)[unclass(iris$Species)]) </code></pre>
-<p><img src="http://moh.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>By the way, the Sepal.Length is the x-axis for each plot that it below the text plot ‘Sepal.Length’ and it is the y-axis for each plot that it is on the right of the text plot.</p>
 <p>This was it. I hope you found this post useful. If you have any suggestion or comments about this post, please let me know!</p>
 </div>

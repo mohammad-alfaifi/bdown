@@ -1,4 +1,4 @@
-baseurl = "http://moh.netlify.com/"
+baseurl = "http://adjusted-r.netlify.com/"
 title = "Data Science with R and Python"
 
 theme = "coder"
