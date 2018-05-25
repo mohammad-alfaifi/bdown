@@ -32,15 +32,15 @@ data(iris)
 #The first six rows with the four columns
 head(iris)
 
-#plotting the different types of Species
-#checking the class of the column
+#checking the class of the Species's column or feature
 class(iris$Species)
 
-#since it is a factor, its levels can be used to show the unique Species
+#since its class is a factor, its levels can be used to show the unique values of the species column
+
 levels(iris$Species) # there are three types: setosa, versicolor and virginica
 
 ```
-Next, plotting the scatter plot of the sepal length and width using GGplot2.
+Next, plotting the scatter plot of the sepal length and width using GGplot2. I am just randomly plotting different variables. The purpose will be clearer soon.
 
 ```{r}
 #import libraries
@@ -126,7 +126,7 @@ pairs(iris, subset='Sepal.Length'<6 ,data=iris, pch=8)
 
 ```
 
-Additionally, we can change the scale of the variables and plot them using only one line of code, which I found very useful when dealing with non-stationary data like the stock prices. 
+Additionally, we can change the scale of the variables and plot them using only one line of code, which I find it very useful when dealing with non-stationary data like the financial data.
 ```{r}
 
 
@@ -138,4 +138,4 @@ By the way, the Sepal.Length is the x-axis for each plot that it below the text 
 
 
 
-This was it. If you have any suggestion or comments about this post, please let me know! 
+This was it. I hope you found this post useful.  If you have any suggestion or comments about this post, please let me know! 

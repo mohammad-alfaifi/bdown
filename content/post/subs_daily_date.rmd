@@ -1,0 +1,102 @@
+---
+title: "Subseting Daily Data Using Data.Table "
+output: html_document
+date: "2018-05-24T21:48:51-07:00"
+author: 'Mohammad Alfaifi
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+This blog post shows how to get the beginning (end) of the month (year) data from daily data.  In my dissertation, I needed to calculate monthly returns and get the book value and the market value of the last day of June and December of different firms. The easiest way I found to achieve this goal is through using the code below. 
+
+The data used in this post is the daily adjusted close price for S&P500 over the last year.
+ 
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+sp500<-read.csv('data/s_and_p_500_daily.csv')
+
+```
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+head(sp500)
+tail(sp500)
+```
+
+
+The first thing I want to do is to add two columns:  *year* and  *month* columns using zoo package. 
+
+```{r}
+#check the class of the data column
+
+class(sp500$Date)
+#changing its class to date
+sp500$Date<-as.Date(sp500$Date)
+
+#importing Zoo library 
+library(zoo)
+library(lubridate)
+
+sp500$year_month <- as.yearmon(sp500$Date)
+sp500$year <- year(sp500$Date)
+
+head(sp500)
+
+```
+
+Let's say that we need the last observation of each month. We may need this kind of data to calculate  the monthly return of S&P500. We can achieve this using .SD and by in the column
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+#importing data.table library
+
+library(data.table)
+
+sp500<-as.data.table(sp500) #chaning sp500
+
+last_daymonth_value<- sp500[,.SD[.N],by=.(year_month)] #SD subsets the last value of each month (.N)
+
+last_daymonth_value
+```
+
+If we want the first value of each month we can change *'.N'* to *1* to get the results
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+
+first_daymonth_value<- sp500[,.SD[1],by=.(year_month)] #SD subsets the last value of each month (1)
+
+first_daymonth_value
+
+```
+
+The same thing can be done with the year column, below are the first observation of each year. 
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+
+first_year_value<- sp500[,.SD[1],by=.(year)] #SD subsets the last value of year (1)
+
+first_year_value
+```
+
+To get the last observation of each year, we need only to change *SD[1]* to *SD[.N]* as it is shown below
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+
+last_year_value<- sp500[,.SD[.N],by=.(year)] #SD subsets the last value of year (N)
+
+last_year_value
+```
+
+This techinque does not only work with the first or last day of the month(year), we can get the second value of each month as following:
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+
+last_year_value<- sp500[,.SD[2],by=.(year)] #SD subsets the last value of year (2)
+
+last_year_value
+```
+
