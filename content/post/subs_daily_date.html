@@ -1,0 +1,128 @@
+---
+title: "Subseting Daily Time Series Data Using Data.Table"
+output: html_document
+date: "2018-05-24T21:48:51-07:00"
+category: 'R'
+author: 'Mohammad Alfaifi'
+---
+
+
+
+<p>This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.</p>
+<p>The data loaded below is for the daily adjusted close price of S&amp;P500 over the last year.</p>
+<pre class="r"><code>head(sp500)</code></pre>
+<pre><code>##         Date Adj.Close
+## 1 2017-05-24   2404.39
+## 2 2017-05-25   2415.07
+## 3 2017-05-26   2415.82
+## 4 2017-05-30   2412.91
+## 5 2017-05-31   2411.80
+## 6 2017-06-01   2430.06</code></pre>
+<pre class="r"><code>tail(sp500)</code></pre>
+<pre><code>##           Date Adj.Close
+## 248 2018-05-17   2720.13
+## 249 2018-05-18   2712.97
+## 250 2018-05-21   2733.01
+## 251 2018-05-22   2724.44
+## 252 2018-05-23   2733.29
+## 253 2018-05-24   2727.76</code></pre>
+<p>The first thing I want to do is to add two columns: <em>year</em> and <em>month</em> using the zoo and lubridate packages so that I can use them later to subset the dataframe.</p>
+<pre class="r"><code>#check the class of the data column
+
+class(sp500$Date)</code></pre>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+<pre class="r"><code>#changing its class to date
+sp500$Date&lt;-as.Date(sp500$Date)
+
+#importing Zoo and lubridate
+library(zoo)
+library(lubridate)
+
+sp500$year_month &lt;- as.yearmon(sp500$Date) #add the year month column
+sp500$year &lt;- year(sp500$Date) # adding the year column
+
+head(sp500)</code></pre>
+<pre><code>##         Date Adj.Close year_month year
+## 1 2017-05-24   2404.39   May 2017 2017
+## 2 2017-05-25   2415.07   May 2017 2017
+## 3 2017-05-26   2415.82   May 2017 2017
+## 4 2017-05-30   2412.91   May 2017 2017
+## 5 2017-05-31   2411.80   May 2017 2017
+## 6 2017-06-01   2430.06   Jun 2017 2017</code></pre>
+<div id="last-observation-of-each-month" class="section level2">
+<h2>Last observation of each month</h2>
+<p>Let’s say that we need the last observation of each month. We may need this kind of data to calculate the monthly return of S&amp;P500. We can achieve this using .SD in the j command of data table. The .SD returns a subset of x’s data of each group.</p>
+<pre class="r"><code>#importing data.table library
+
+library(data.table)
+
+sp500&lt;-as.data.table(sp500) #chaning sp500
+
+last_daymonth_value&lt;- sp500[,.SD[.N],by=.(year_month)] #SD subsets the (.N) or last observation of each month
+
+last_daymonth_value</code></pre>
+<pre><code>##     year_month       Date Adj.Close year
+##  1:   May 2017 2017-05-31   2411.80 2017
+##  2:   Jun 2017 2017-06-30   2423.41 2017
+##  3:   Jul 2017 2017-07-31   2470.30 2017
+##  4:   Aug 2017 2017-08-31   2471.65 2017
+##  5:   Sep 2017 2017-09-29   2519.36 2017
+##  6:   Oct 2017 2017-10-31   2575.26 2017
+##  7:   Nov 2017 2017-11-30   2647.58 2017
+##  8:   Dec 2017 2017-12-29   2673.61 2017
+##  9:   Jan 2018 2018-01-31   2823.81 2018
+## 10:   Feb 2018 2018-02-28   2713.83 2018
+## 11:   Mar 2018 2018-03-29   2640.87 2018
+## 12:   Apr 2018 2018-04-30   2648.05 2018
+## 13:   May 2018 2018-05-24   2727.76 2018</code></pre>
+</div>
+<div id="first-observation-of-each-month" class="section level2">
+<h2>First observation of each month</h2>
+<p>If we want the first value of each month we can change <em>‘.N’</em> to <em>1</em> to get the results</p>
+<pre class="r"><code>first_daymonth_value&lt;- sp500[,.SD[1],by=.(year_month)] #SD subsets the (1) observation of each month
+
+first_daymonth_value</code></pre>
+<pre><code>##     year_month       Date Adj.Close year
+##  1:   May 2017 2017-05-24   2404.39 2017
+##  2:   Jun 2017 2017-06-01   2430.06 2017
+##  3:   Jul 2017 2017-07-03   2429.01 2017
+##  4:   Aug 2017 2017-08-01   2476.35 2017
+##  5:   Sep 2017 2017-09-01   2476.55 2017
+##  6:   Oct 2017 2017-10-02   2529.12 2017
+##  7:   Nov 2017 2017-11-01   2579.36 2017
+##  8:   Dec 2017 2017-12-01   2642.22 2017
+##  9:   Jan 2018 2018-01-02   2695.81 2018
+## 10:   Feb 2018 2018-02-01   2821.98 2018
+## 11:   Mar 2018 2018-03-01   2677.67 2018
+## 12:   Apr 2018 2018-04-02   2581.88 2018
+## 13:   May 2018 2018-05-01   2654.80 2018</code></pre>
+</div>
+<div id="first-observation-of-each-year" class="section level2">
+<h2>First observation of each year</h2>
+<p>The same thing can be done with the year column, below are the first observation of each year.</p>
+<pre class="r"><code>first_year_value&lt;- sp500[,.SD[1],by=.(year)] #SD subsets the (1) observation of each year
+first_year_value</code></pre>
+<pre><code>##    year       Date Adj.Close year_month
+## 1: 2017 2017-05-24   2404.39   May 2017
+## 2: 2018 2018-01-02   2695.81   Jan 2018</code></pre>
+</div>
+<div id="last-observation-of-each-year" class="section level2">
+<h2>Last observation of each year</h2>
+<p>To get the last observation of each year, we need only to change <em>SD[1]</em> to <em>SD[.N]</em> as it is shown below</p>
+<pre class="r"><code>last_year_value&lt;- sp500[,.SD[.N],by=.(year)] #SD subsets the (N) or last observation of each year
+last_year_value</code></pre>
+<pre><code>##    year       Date Adj.Close year_month
+## 1: 2017 2017-12-29   2673.61   Dec 2017
+## 2: 2018 2018-05-24   2727.76   May 2018</code></pre>
+</div>
+<div id="the-second-observation-of-each-month" class="section level2">
+<h2>The second observation of each month</h2>
+<p>This technique does not only work with the first or last day of the month(year). We can get the code below to return the second value of each month as shown below</p>
+<pre class="r"><code>last_year_value&lt;- sp500[,.SD[2],by=.(year)] #SD subsets the (2) observation of each month
+
+last_year_value</code></pre>
+<pre><code>##    year       Date Adj.Close year_month
+## 1: 2017 2017-05-25   2415.07   May 2017
+## 2: 2018 2018-01-03   2713.06   Jan 2018</code></pre>
+<p>This was it. I hope you found this post helpful. If you have any suggestion or comments, please let me know!</p>
+</div>
