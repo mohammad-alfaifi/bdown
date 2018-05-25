@@ -34,6 +34,7 @@ tail(sp500)
 ```
 
 
+
 The first thing I want to do is to add two columns:  *year* and  *month*  using the zoo and lubridate packages so that I can use them later to subset the dataframe. 
 
 ```{r}
