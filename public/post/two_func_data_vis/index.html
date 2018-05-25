@@ -88,7 +88,7 @@ class(iris$Species)</code></pre>
 
 levels(iris$Species) # there are three types: setosa, versicolor and virginica</code></pre>
 <pre><code>## [1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot;</code></pre>
-<p>Next, plotting the scatter plot of the sepal length and width using GGplot2. I am just randomly plotting different variables. The purpose will be clearer soon.</p>
+<p>Next, plotting the scatter plot of the sepal length and width using ggplot2 package. I am just randomly plotting different variables. The purpose will be clearer soon.</p>
 <pre class="r"><code>#import libraries
 
 library(ggplot2)
@@ -102,7 +102,7 @@ s</code></pre>
 <pre class="r"><code>p&lt;-ggplot(iris,aes(x=Petal.Length,y=Petal.Width))+geom_point()
 p</code></pre>
 <p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Now to compare both plots, I need either to go back and forth between both plots or I can use the par function with mfrow parameter, which allows me to display both plots side by side as it is shown below</p>
+<p>To compare both plots, I need either to go back and forth between both plots or I can use the par function with mfrow parameter, which allows me to display both plots side by side as it is shown below</p>
 <pre class="r"><code>par(mfrow=c(1,2)) # 1 is the number of rows while two is the number of columns
 s # sepal length and width plot
 p # petal length and width plot</code></pre>
@@ -121,8 +121,8 @@ p # petal length and width plot</code></pre>
 <p>Additionally, we can change the scale of the variables and plot them using only one line of code, which I find it very useful when dealing with non-stationary data like the financial data.</p>
 <pre class="r"><code>pairs(iris[1:4], log = &quot;xy&quot;,pch=21, bg = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)[unclass(iris$Species)]) </code></pre>
 <p><img src="http://adjusted-r.netlify.com/post/two_func_data_vis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>By the way, the Sepal.Length is the x-axis for each plot that it below the text plot ‘Sepal.Length’ and it is the y-axis for each plot that it is on the right of the text plot.</p>
-<p>This was it. I hope you found this post useful. If you have any suggestion or comments about this post, please let me know!</p>
+<p>The Sepal.Length is the x-axis for each plot that it below the text plot ‘Sepal.Length’ while it is the y-axis for each plot that it is on the right of the text plot.</p>
+<p>This was it. If you have any suggestion or comments about this post, please let me know!</p>
 </div>
 
   </article>
