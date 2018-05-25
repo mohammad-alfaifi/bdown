@@ -1,14 +1,15 @@
 ---
-title: "Subseting Daily Time Series Data Using Data.Table"
+title: "Subseting Daily Time Series Data Using Data.Table Package"
 output: html_document
 date: "2018-05-24T21:48:51-07:00"
 category: 'R'
 author: 'Mohammad Alfaifi'
+
 ---
 
 
 
-<p>This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.</p>
+<p>This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post. The prerequisite to understand the code is to be familiar with data.table package syntax.</p>
 <p>The data loaded below is for the daily adjusted close price of S&amp;P500 over the last year.</p>
 <pre class="r"><code>head(sp500)</code></pre>
 <pre><code>##         Date Adj.Close
