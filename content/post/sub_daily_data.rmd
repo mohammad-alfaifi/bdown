@@ -26,7 +26,8 @@ The data loaded below is for the daily adjusted close price of S&P500 over the l
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 
-sp500 <-readRDS('../../data/sp500.rds')
+
+sp500 <-readRDS('../../static/data/sp500.rds')
 ```
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
@@ -36,7 +37,7 @@ tail(sp500)
 ```
 
 
-The first thing I want to do is to add two columns:  *year* and  *month*  using the zoo and lubridate packages so that I can use them later to subset the dataframe. 
+The first thing I want to do is to add two columns:  *year* and  *month*  using the zoo and lubridate packages so that I can use them later to subset the data frame. 
 
 ```{r}
 #check the class of the data column
@@ -58,7 +59,7 @@ head(sp500)
 
 ## Last observation of each month
 
-Let's say that we need the last observation of each month. We may need this kind of data to calculate  the monthly return of S&P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x's data of each group. 
+Let's say that we need the last observation of each month. We may need this kind of data to calculate  the monthly returns of S&P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x's data of each group. 
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 #importing data.table library
@@ -74,7 +75,7 @@ last_daymonth_value
 
 ## First observation of each month
 
-If we want the first value of each month we can change *'.N'* to *1* to get the results
+If we want the first value of each month we can change *'.N'* to *1* to get the desired results
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 
@@ -110,7 +111,7 @@ This technique does not only work with the first or last day of the month(year).
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 
-last_year_value<- sp500[,.SD[2],by=.(year)] #SD subsets the (2) observation of each month
+last_year_value<- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
 
 last_year_value
 ```

@@ -81,7 +81,7 @@
 ## 251 2018-05-22   2724.44
 ## 252 2018-05-23   2733.29
 ## 253 2018-05-24   2727.76</code></pre>
-<p>The first thing I want to do is to add two columns: <em>year</em> and <em>month</em> using the zoo and lubridate packages so that I can use them later to subset the dataframe.</p>
+<p>The first thing I want to do is to add two columns: <em>year</em> and <em>month</em> using the zoo and lubridate packages so that I can use them later to subset the data frame.</p>
 <pre class="r"><code>#check the class of the data column
 
 class(sp500$Date)</code></pre>
@@ -106,7 +106,7 @@ head(sp500)</code></pre>
 ## 6 2017-06-01   2430.06   Jun 2017 2017</code></pre>
 <div id="last-observation-of-each-month" class="section level2">
 <h2>Last observation of each month</h2>
-<p>Let’s say that we need the last observation of each month. We may need this kind of data to calculate the monthly return of S&amp;P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x’s data of each group.</p>
+<p>Let’s say that we need the last observation of each month. We may need this kind of data to calculate the monthly returns of S&amp;P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x’s data of each group.</p>
 <pre class="r"><code>#importing data.table library
 
 library(data.table)
@@ -133,7 +133,7 @@ last_daymonth_value</code></pre>
 </div>
 <div id="first-observation-of-each-month" class="section level2">
 <h2>First observation of each month</h2>
-<p>If we want the first value of each month we can change <em>‘.N’</em> to <em>1</em> to get the results</p>
+<p>If we want the first value of each month we can change <em>‘.N’</em> to <em>1</em> to get the desired results</p>
 <pre class="r"><code>first_daymonth_value&lt;- sp500[,.SD[1],by=.(year_month)] #SD subsets the (1) observation of each month
 
 first_daymonth_value</code></pre>
@@ -173,12 +173,23 @@ last_year_value</code></pre>
 <div id="the-second-observation-of-each-month" class="section level2">
 <h2>The second observation of each month</h2>
 <p>This technique does not only work with the first or last day of the month(year). We can get the code below to return the second value of each month as shown below</p>
-<pre class="r"><code>last_year_value&lt;- sp500[,.SD[2],by=.(year)] #SD subsets the (2) observation of each month
+<pre class="r"><code>last_year_value&lt;- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
 
 last_year_value</code></pre>
-<pre><code>##    year       Date Adj.Close year_month
-## 1: 2017 2017-05-25   2415.07   May 2017
-## 2: 2018 2018-01-03   2713.06   Jan 2018</code></pre>
+<pre><code>##     year_month       Date Adj.Close year
+##  1:   May 2017 2017-05-25   2415.07 2017
+##  2:   Jun 2017 2017-06-02   2439.07 2017
+##  3:   Jul 2017 2017-07-05   2432.54 2017
+##  4:   Aug 2017 2017-08-02   2477.57 2017
+##  5:   Sep 2017 2017-09-05   2457.85 2017
+##  6:   Oct 2017 2017-10-03   2534.58 2017
+##  7:   Nov 2017 2017-11-02   2579.85 2017
+##  8:   Dec 2017 2017-12-04   2639.44 2017
+##  9:   Jan 2018 2018-01-03   2713.06 2018
+## 10:   Feb 2018 2018-02-02   2762.13 2018
+## 11:   Mar 2018 2018-03-02   2691.25 2018
+## 12:   Apr 2018 2018-04-03   2614.45 2018
+## 13:   May 2018 2018-05-02   2635.67 2018</code></pre>
 <p>This was it. If you have any suggestion or comments, please let me know!</p>
 </div>
 
