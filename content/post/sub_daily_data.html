@@ -51,8 +51,8 @@ head(sp500)</code></pre>
 ## 4 2017-05-30   2412.91   May 2017 2017
 ## 5 2017-05-31   2411.80   May 2017 2017
 ## 6 2017-06-01   2430.06   Jun 2017 2017</code></pre>
-<div id="last-observation-of-each-month" class="section level2">
-<h2>Last observation of each month</h2>
+<div id="last-trading-day-of-each-month" class="section level2">
+<h2>Last trading day of each month</h2>
 <p>Let’s say that we need the last observation of each month. We may need this kind of data to calculate the monthly returns of S&amp;P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x’s data of each group.</p>
 <pre class="r"><code>#importing data.table library
 
@@ -78,8 +78,8 @@ last_daymonth_value</code></pre>
 ## 12:   Apr 2018 2018-04-30   2648.05 2018
 ## 13:   May 2018 2018-05-24   2727.76 2018</code></pre>
 </div>
-<div id="first-observation-of-each-month" class="section level2">
-<h2>First observation of each month</h2>
+<div id="first-trading-day-of-each-month" class="section level2">
+<h2>First trading day of each month</h2>
 <p>If we want the first value of each month we can change <em>‘.N’</em> to <em>1</em> to get the desired results</p>
 <pre class="r"><code>first_daymonth_value&lt;- sp500[,.SD[1],by=.(year_month)] #SD subsets the (1) observation of each month
 
@@ -119,7 +119,7 @@ last_year_value</code></pre>
 </div>
 <div id="the-second-observation-of-each-month" class="section level2">
 <h2>The second observation of each month</h2>
-<p>This technique does not only work with the first or last day of the month(year). We can get the code below to return the second value of each month as shown below</p>
+<p>This technique does not only work with the first or last trading day of the month(year). We can get the code below to return the second value of each month as shown below</p>
 <pre class="r"><code>last_year_value&lt;- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
 
 last_year_value</code></pre>

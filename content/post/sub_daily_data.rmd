@@ -57,7 +57,7 @@ head(sp500)
 
 ```
 
-## Last observation of each month
+## Last trading day of each month
 
 Let's say that we need the last observation of each month. We may need this kind of data to calculate  the monthly returns of S&P500. We can achieve this using the groupby, and .SD in the j command of data table. The .SD returns a subset of x's data of each group. 
 
@@ -73,7 +73,7 @@ last_daymonth_value<- sp500[,.SD[.N],by=.(year_month)] #SD subsets the (.N) or l
 last_daymonth_value
 ```
 
-## First observation of each month
+## First trading day of each month
 
 If we want the first value of each month we can change *'.N'* to *1* to get the desired results
 
@@ -107,7 +107,7 @@ last_year_value
 ## The second observation of each month
 
 
-This technique does not only work with the first or last day of the month(year).  We can get the code below to return the second value of each month as shown below
+This technique does not only work with the first  or last trading day of the month(year).  We can get the code below to return the second value of each month as shown below
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 
