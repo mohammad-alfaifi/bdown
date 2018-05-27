@@ -104,7 +104,7 @@ To get the last observation of each year, we need only to change *SD[1]* to *SD[
 last_year_value<- sp500[,.SD[.N],by=.(year)] #SD subsets the (N) or last observation of each year
 last_year_value
 ```
-## The second observation of each month
+## The second trading day of each month
 
 
 This technique does not only work with the first  or last trading day of the month(year).  We can get the code below to return the second value of each month as shown below

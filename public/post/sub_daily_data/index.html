@@ -170,8 +170,8 @@ last_year_value</code></pre>
 ## 1: 2017 2017-12-29   2673.61   Dec 2017
 ## 2: 2018 2018-05-24   2727.76   May 2018</code></pre>
 </div>
-<div id="the-second-observation-of-each-month" class="section level2">
-<h2>The second observation of each month</h2>
+<div id="the-second-trading-day-of-each-month" class="section level2">
+<h2>The second trading day of each month</h2>
 <p>This technique does not only work with the first or last trading day of the month(year). We can get the code below to return the second value of each month as shown below</p>
 <pre class="r"><code>last_year_value&lt;- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
 
