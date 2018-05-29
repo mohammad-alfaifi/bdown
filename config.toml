@@ -19,7 +19,7 @@ enableEmoji=true
 [params]
 	author = "Mohammad Alfaifi"
 	description = "Data Science with R and Python "
-	avatar = "/static/images/myavatar.jpg"
+	avatar = "/img/myavatar.jpg"
 	motto = ""
 	enableToc = true
 	enableShareCard = true
