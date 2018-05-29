@@ -1,7 +1,7 @@
 baseURL = "http://adjusted-r.netlify.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Adjusted-r"
+title = "Adjusted-R"
 theme = "desktop/bdown/themes/hugo-dream-plus"
 themesDir = "../../"   #Don't use this, only for netlify
 
