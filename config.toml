@@ -1,7 +1,7 @@
 baseURL = "http://adjusted-r.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Data Science with R and Python"
+title = "Adjusted-r"
 theme = "hugo-dream-plus"
 themesDir = "../../"   #Don't use this, only for netlify
 
@@ -10,7 +10,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
 
-disqusShortname = "disqus_Z7ozFSnuFz"
+disqusShortname = "@disqus_Z7ozFSnuFz"
 
 enableRobotsTXT = true
 
@@ -19,7 +19,7 @@ enableEmoji=true
 
 [params]
 	author = "Mohammad Alfaifi"
-	description = "adjusted-r"
+	description = "Data science with R and Python"
 	avatar = "/img/myavatar.jpg"
 	motto = ""
 	enableToc = true
