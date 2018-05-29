@@ -2,7 +2,7 @@ baseURL = "http://adjusted-r.netlify.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Adjusted-r"
-theme = "hugo-dream-plus"
+theme = "desktop/bdown/themes/hugo-dream-plus"
 themesDir = "../../"   #Don't use this, only for netlify
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -11,7 +11,7 @@ pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
 
 disqusShortname = "adjusted-r"
-
+ 
 enableRobotsTXT = true
 
 #Enable Hugo Emoji Conversion

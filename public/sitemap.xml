@@ -19,7 +19,12 @@
   
   <url>
     <loc>http://adjusted-r.netlify.com/about/</loc>
-    <lastmod>2018-05-05T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -29,12 +34,6 @@
   
   <url>
     <loc>http://adjusted-r.netlify.com/tags/data-cleansing/</loc>
-    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://adjusted-r.netlify.com/</loc>
     <lastmod>2018-05-24T21:48:51-07:00</lastmod>
     <priority>0</priority>
   </url>
