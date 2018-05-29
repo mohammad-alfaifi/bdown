@@ -111,9 +111,9 @@ This technique does not only work with the first  or last trading day of the mon
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 
-last_year_value<- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
+second_month_value<- sp500[,.SD[2],by=.(year_month)] #SD subsets the (2) observation of each month
 
-last_year_value
+second_month_value
 ```
 
 
