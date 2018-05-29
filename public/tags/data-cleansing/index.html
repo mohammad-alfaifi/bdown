@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><style>
+body {
+	display: block;
+	--colorBG: "#40e0d0, #ff8c00, #ff0080";
+		background-image: var(--bgImage) !important;
+	
+}
+
+body, body.pushable {
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover !important;
+}
+
+</style><title>
+
+Tag | data-cleansing
+
+</title><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="Mohammad Alfaifi" />
+	<meta name="description" content="Data Science with R and Python " />
+<meta name="generator" content="Hugo 0.40.2" />
+
+<link rel="shortcut icon" href="/img/defaultFav.ico">
+
+<link rel="canonical" href="http://adjusted-r.netlify.com/tags/data-cleansing/" />
+<link rel="alternative" href="/index.xml" title="Data Science with R and Python" type="application/atom+xml"/><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+<style>
+body.pushable {
+	display: block;
+		background-image: var(--bgImage) !important;
+	 ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="/css/site.css">
+<script>
+	var colorBG =  false 
+	var enabledPost = true
+	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+</script>
+</head>
+
+<body><script>
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;
+		var bgImage = "url(" + "static/images/bk.jpeg" + ")"
+	
+	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
+	document.body.style.setProperty('--blurEff',"0px");
+	document.body.style.setProperty('--bgImage', bgImage);
+
+	function getRandomInt(min, max) {
+	  min = Math.ceil(min)
+	  max = Math.floor(max)
+	  var random
+	  while (1) {
+	    random = Math.floor(Math.random() * (max - min)) + min
+	    if (random !== prevBgIndex) {
+	      prevBgIndex = random
+	      break
+	    }
+	  }
+	  return random
+	}
+
+	function connect(arr) {
+	  var str = ''
+	  for (var i = 0; i < arr.length; i++) {
+	    if (i !== arr.length - 1) {
+	      str += arr[i] + ', '
+	    } else {
+	      str += arr[i]
+	    }
+	  }
+	  return str
+	}
+</script><div class="blur-overlay"></div><div id="sidebar" class="ui sidebar inverted vertical menu">
+	<section id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
+	<img src="/img/myavatar.jpg">
+</div>
+<h3 class="ui header">Mohammad Alfaifi
+	<div class="sub header"></div>
+</h3>
+</section><section class="ui attached center aligned inverted segment sidebar-dream-tags">
+<a class="ui label" href="/tags/data-cleansing" title="data-cleansing">data-cleansing</a>
+
+<a class="ui label" href="/tags/data-visualization" title="data-visualization">data-visualization</a>
+
+</section>	
+	
+	<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+		<div class="ui inverted accordion">
+<div class="title">
+	<i class="dropdown icon"></i>
+	<a class="link" href="/categories/r">r</a>
+</div>
+<div class="content">
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/sub_daily_data/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Subseting Daily Time Series Data Using Data.Table Package</p>
+		</div>
+	</a>
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/two_func_data_vis/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>The two most important functions for data visualisation in R</p>
+		</div>
+	</a>
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/merge_in_r/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</p>
+		</div>
+	</a>
+
+</div>
+
+</div>
+	</section>
+	
+	
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
+<p>© 2018 Data Science with R and Python</p>
+    
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></section>
+</div>
+<div class="pusher">
+		<div class="flipper">
+			<div class="front">
+<nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div><div class="item">
+		<a href="/">
+			<i class="inverted big link home icon" title="Home"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/post">
+			<i class="inverted big link archive icon" title="Archive"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/tags">
+			<i class="inverted big link tags icon" title="All Tags"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/categories">
+			<i class="inverted big link cubes icon" title="All Categories"></i>
+		</a>
+    </div>
+	
+	<div class="item">
+		
+		<i class="disabled inverted big chevron circle left icon" title="Previous page"></i>
+  	
+  </div>
+	<div class="item">	
+		<i class="disabled inverted big chevron circle right icon" title="Next page"></i>
+		
+	</div>
+	
+</nav>
+
+<div class="ui centered grid">
+	<div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+		<div class="ui inverted accordion">
+	<div id="header" class="ui inverted segment column box">
+		<header id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
+	<img src="/img/myavatar.jpg">
+</div>
+<h3 class="ui header">Mohammad Alfaifi
+	<div class="sub header"></div>
+</h3>
+</header>
+		<div class="active title header-title"><div id="tag-category-pop" class="ui red right corner label">		
+				<i class="hand point icon up"title="Click this to pop tags and categories"></i>		
+			</div></div>
+		<div id="tag-category" class="active content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
+<a class="ui label" href="/tags/data-cleansing" title="data-cleansing">data-cleansing</a>
+
+<a class="ui label" href="/tags/data-visualization" title="data-visualization">data-visualization</a>
+
+</section><section class="ui attached inverted segment dream-categories both flexbox">
+			<div class="inverted accordion">
+<div class="title">
+	<i class="dropdown icon"></i>
+	<a class="link" href="/categories/r">r</a>
+</div>
+<div class="content">
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/sub_daily_data/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Subseting Daily Time Series Data Using Data.Table Package</p>
+		</div>
+	</a>
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/two_func_data_vis/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>The two most important functions for data visualisation in R</p>
+		</div>
+	</a>
+
+	<a class="item" href="http://adjusted-r.netlify.com/post/merge_in_r/">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</p>
+		</div>
+	</a>
+
+</div>
+
+</div>
+			</section></div>
+		<footer class="ui bottom attached center aligned inverted segment">
+<p>© 2018 Data Science with R and Python</p>
+    
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></footer>
+	</div>
+</div>
+	</div>
+	<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+		<div class="cards row box">
+			
+	<article class="blog-card none flexbox" style="background-image: url(/img/default1.jpg)">
+<img class="image" src="/img/default2.jpg"></img>
+<div class="title-content twemoji">
+	<h3><a class="title" href=http://adjusted-r.netlify.com/post/sub_daily_data/>Subseting Daily Time Series Data Using Data.Table Package</a></h3>
+	<div class="intro twemoji"><br><br></div>
+</div>
+<div class="utility-info">
+	<ul class="utility-list">
+		
+		<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="1e0bf50e612fa4e5044c01008e780c5b"></span></div>
+		
+		<div><span><i class="calendar icon"></i>May 24, 2018</span></div>
+		<div><span><i class="clock icon"></i>5 min read</span></div>
+	</ul>
+</div>
+<div class="color-overlay"></div>
+</article>
+
+	
+<article class="blog-card none flexbox" style="background-image: url(/img/default6.jpg)">
+<img class="image" src="/img/default3.jpg"></img>
+<div class="title-content twemoji">
+	<h3><a class="title" href=http://adjusted-r.netlify.com/post/merge_in_r/>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</a></h3>
+	<div class="intro twemoji"><br><br></div>
+</div>
+<div class="utility-info">
+	<ul class="utility-list">
+		
+		<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="68ddecb1fef34016b4afbdc344c3dfee"></span></div>
+		
+		<div><span><i class="calendar icon"></i>May 10, 2018</span></div>
+		<div><span><i class="clock icon"></i>6 min read</span></div>
+	</ul>
+</div>
+<div class="color-overlay"></div>
+</article>
+
+	
+
+
+		</div>
+	</div>
+</div>
+
+			</div>
+			<div class="back"><nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div><div class="item">
+	<a href="https://github.com/mohammadalfaifi" target="_blank">
+		<i id="ico" class="inverted big link github icon" title="GitHub"></i>
+	</a>
+</div>
+<div class="item">
+	<a href="https://twitter.com/alfaifi_moh" target="_blank">
+		<i id="ico" class="inverted big link twitter icon" title="Twitter"></i>
+	</a>
+</div>
+
+</nav>
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments"><div class="ui inverted segment">
+	<article class="twemoji"><hr />
+
+<p>title: &ldquo;About&rdquo;</p>
+
+<h2 id="date-2018-05-05t21-48-51-07-00">date: &ldquo;2018-05-05T21:48:51-07:00&rdquo;</h2>
+
+<p>I am passionate about data and quantitative analysis.  I write about data cleansing, manipulation and analysis using R and Python programming languages. I write to learn, understand and give back to the community.</p>
+
+<p>The name Adjusted-R comes from the adjusted R-squared which is a modified version of R-squared :)</p>
+</article>
+</div></section>
+	</div>
+</div></div>
+		</div>
+	</div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script><script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+<script id="dsq-count-scr" src="//disqus_Z7ozFSnuFz.disqus.com/count.js" async></script>
+
+<script>
+	(function () {
+	  console.log("Twemoji up and making stuff colourful!");
+	  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
+		twemoji.parse(b[a]);
+	  }
+	})();
+</script>
+
+</body>
+
+</html>

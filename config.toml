@@ -5,6 +5,7 @@ title = "Data Science with R and Python"
 theme = "hugo-dream-plus"
 themesDir = "../../"   #Don't use this, only for netlify
 
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
@@ -18,7 +19,7 @@ enableEmoji=true
 
 [params]
 	author = "Mohammad Alfaifi"
-	description = "Data Science with R and Python "
+	description = "adjusted-r"
 	avatar = "/img/myavatar.jpg"
 	motto = ""
 	enableToc = true

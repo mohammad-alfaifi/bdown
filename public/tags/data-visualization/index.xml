@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Visualization on Data Science with R and Python</title>
+    <link>http://adjusted-r.netlify.com/tags/data-visualization/</link>
+    <description>Recent content in Data Visualization on Data Science with R and Python</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 May 2018 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="http://adjusted-r.netlify.com/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The two most important functions for data visualisation in R</title>
+      <link>http://adjusted-r.netlify.com/post/two_func_data_vis/</link>
+      <pubDate>Sun, 13 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/post/two_func_data_vis/</guid>
+      <description>In my opinion, the two most important functions for data visualisation in R are Par and Pairs functions.
+Par Function The first function is par function with mfrow parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window.
+Below an example with IRIS dataset. First, loading and inspecting the dataset
+#import libraries library(datasets) #loading iris dataset data(iris) #The first six rows with the four columns head(iris) ## Sepal.</description>
+    </item>
+    
+  </channel>
+</rss>

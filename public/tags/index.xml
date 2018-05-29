@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Data Science with R and Python</title>
+    <link>http://adjusted-r.netlify.com/tags/</link>
+    <description>Recent content in Tags on Data Science with R and Python</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 May 2018 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="http://adjusted-r.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Cleansing</title>
+      <link>http://adjusted-r.netlify.com/tags/data-cleansing/</link>
+      <pubDate>Thu, 24 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/tags/data-cleansing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>http://adjusted-r.netlify.com/tags/data-visualization/</link>
+      <pubDate>Sun, 13 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

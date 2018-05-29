@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/post/sub_daily_data/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/post/two_func_data_vis/</loc>
+    <lastmod>2018-05-13T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/post/merge_in_r/</loc>
+    <lastmod>2018-05-10T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/about/</loc>
+    <lastmod>2018-05-05T21:48:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/tags/data-cleansing/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/tags/data-visualization/</loc>
+    <lastmod>2018-05-13T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/post/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/categories/r/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adjusted-r.netlify.com/tags/</loc>
+    <lastmod>2018-05-24T21:48:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
