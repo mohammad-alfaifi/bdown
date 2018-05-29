@@ -28,9 +28,9 @@ enableEmoji=true
 	favicon = ""
   	
   	#Background settings
-	enableColorBG= false
+	enableColorBG= true
 	bgBlur = "0px"
-	bgImage = "static/images/bk.jpeg"
+	bgImage = "/img/bk.jpeg"
   
 	#Post-displaying Settings
 	enableTags = true
