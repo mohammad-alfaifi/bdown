@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vv on Data Science with R and Python</title>
+    <link>http://adjusted-r.netlify.com/tags/vv/</link>
+    <description>Recent content in Vv on Data Science with R and Python</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 May 2018 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="http://adjusted-r.netlify.com/tags/vv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Subseting Daily Time Series Data Using Data.Table Package</title>
+      <link>http://adjusted-r.netlify.com/post/sub_daily_data/</link>
+      <pubDate>Thu, 24 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/post/sub_daily_data/</guid>
+      <description>This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.
+The prerequisite for this short tutorial is to be familiar with data.</description>
+    </item>
+    
+  </channel>
+</rss>

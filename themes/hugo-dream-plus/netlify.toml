@@ -1,0 +1,7 @@
+[build]
+  publish = "exampleSite/public"
+  command = "cd exampleSite && hugo --theme repo"
+
+[context.production]
+  [context.production.environment]
+    HUGO_VERSION = "0.38"

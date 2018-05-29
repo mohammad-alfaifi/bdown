@@ -1,50 +1,53 @@
-baseurl = "http://adjusted-r.netlify.com/"
+baseURL = "http://adjusted-r.netlify.com/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Data Science with R and Python"
+theme = "hugo-dream-plus"
+themesDir = "../../"   #Don't use this, only for netlify
 
-theme = "coder"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
 
-languagecode = "en"
+disqusShortname = "disqus_Z7ozFSnuFz"
 
-paginate = 20
-canonifyurls = true
+enableRobotsTXT = true
 
-pygmentsstyle = "b2"
-pygmentscodefences = false
-pygmentscodefencesguesssyntax = false
-
-disqusShortname = "@disqus_Z7ozFSnuFz"
-
+#Enable Hugo Emoji Conversion
+enableEmoji=true
 
 [params]
-    author = "Mohammad Alfaifi"
-    description = "JData Science with R and Python"
-    keywords = "data science, R, Python, Time Series, Machine Learning"
-    info = ""
+	author = "Mohammad Alfaifi"
+	description = "Data Science with R and Python "
+	avatar = "/static/images/myavatar.jpg"
+	motto = ""
+	enableToc = true
+	enableShareCard = true
 
-    hideCredits = true
-    hideCopyright = true
+	favicon = ""
+  	
+  	#Background settings
+	enableColorBG= false
+	bgBlur = "0px"
+	bgImage = "static/images/bk.jpeg"
+  
+	#Post-displaying Settings
+	enableTags = true
+	enableCategories = true
 
-    # Custom CSS
-	custom_css = []
+	#Cards or posts shown per page
+	itemsPerPage = 6
 
-[[params.social]]
-    name = "Github"
-    weight = 1
-    url = "https://github.com/mohammad-alfaifi"
-[[params.social]]
-    name = "Twitter"
-    weight = 2
-    url = "https://twitter.com/alfaifi_moh"
-[[params.social]]
-    name = "LinkedIn"
-    weight = 3
-    url = "https://www.linkedin.com/in/mohammadalfaifi/"
+	#Set whether you're hosting "cards" or "post"
+	contentType = "post"
 
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/post/"
-[[menu.main]]
-    name = "About"
-    weight = 2
-    url = "/about/"
+	#Enable Twitter Emoji
+	twitterEmoji=true
+
+[social]
+	email = ""
+	github = "mohammadalfaifi"
+	stackoverflow = ""
+	medium = ""
+	twitter = "alfaifi_moh" 
+	siteStartYear = 2018

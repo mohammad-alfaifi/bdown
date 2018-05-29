@@ -2,7 +2,8 @@
 title: "The two most important functions for data visualisation in R"
 output: html_document
 date: "2018-05-13T21:48:51-07:00"
-category: 'R'
+categories: 'R'
+tags: ['Data Visualization']
 author: 'Mohammad Alfaifi'
 ---
 
