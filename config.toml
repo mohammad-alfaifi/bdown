@@ -28,7 +28,7 @@ enableEmoji=true
 	favicon = ""
   	
   	#Background settings
-	enableColorBG= true
+	enableColorBG= false
 	bgBlur = "0px"
 	bgImage = "/img/bk.jpeg"
   

@@ -4,7 +4,8 @@
 <head><style>
 body {
 	display: block;
-	--colorBG: "#40e0d0, #ff8c00, #ff0080";background: linear-gradient(to right, var(--colorBG)) !important;
+	--colorBG: "#40e0d0, #ff8c00, #ff0080";
+		background-image: var(--bgImage) !important;
 	
 }
 
@@ -31,13 +32,14 @@ Tag | data-cleansing
 <link rel="alternative" href="/index.xml" title="Adjusted-r" type="application/atom+xml"/><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 <style>
 body.pushable {
-	display: block;background: linear-gradient(to right, var(--colorBG)) !important;
+	display: block;
+		background-image: var(--bgImage) !important;
 	 ;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/css/site.css">
 <script>
-	var colorBG =  true 
+	var colorBG =  false 
 	var enabledPost = true
 	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
@@ -46,18 +48,13 @@ body.pushable {
 
 <body><script>
 var prevBgIndex = 0;
-var bodyBgSwitchIndex = 0;var gradients = [
-	  [],
-	  ['#40e0d0', '#ff8c00', '#ff0080'], 
-	  ['#3e5151', '#decba4'], 
-	  ['#11998e', '#38ef7d'], 
-	  ['#108dc7', '#ef8e38'], 
-	  ['#fc5c7d', '#6a82fb'], 
-	  ['#fc466b', '#3f5efb'], 
-	  ['#c94b4b', '#4b134f'], 
-	  ['#23074d', '#cc5333'] 
-	]
-	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]))
+var bodyBgSwitchIndex = 0;
+		var bgImage = "url(" + "/img/bk.jpeg" + ")"
+	
+	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
+	document.body.style.setProperty('--blurEff',"0px");
+	document.body.style.setProperty('--bgImage', bgImage);
+
 	function getRandomInt(min, max) {
 	  min = Math.ceil(min)
 	  max = Math.floor(max)
@@ -83,7 +80,7 @@ var bodyBgSwitchIndex = 0;var gradients = [
 	  }
 	  return str
 	}
-</script><div id="sidebar" class="ui sidebar inverted vertical menu">
+</script><div class="blur-overlay"></div><div id="sidebar" class="ui sidebar inverted vertical menu">
 	<section id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
 	<img src="/img/myavatar.jpg">
 </div>
@@ -258,7 +255,7 @@ var bodyBgSwitchIndex = 0;var gradients = [
 
 	
 <article class="blog-card none flexbox" style="background-image: url(/img/default3.jpg)">
-<img class="image" src="/img/default1.jpg"></img>
+<img class="image" src="/img/default6.jpg"></img>
 <div class="title-content twemoji">
 	<h3><a class="title" href=http://adjusted-r.netlify.com/post/merge_in_r/>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</a></h3>
 	<div class="intro twemoji"><br><br></div>
