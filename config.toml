@@ -46,10 +46,7 @@ enableEmoji=true
 	twitterEmoji=true
 
 [social]
-	email = ""
-	github = "mohammad-alfaifi"
-	stackoverflow = ""
-	medium = ""
 	twitter = "alfaifi_moh" 
+	github = "mohammad-alfaifi"
 	linkedin = "mohammadalfaifi"
 	siteStartYear = 2018
