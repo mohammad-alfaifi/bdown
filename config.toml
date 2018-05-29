@@ -10,7 +10,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
 
-disqusShortname = "adjusted-r-com"
+disqusShortname = "adjusted-r"
 
 enableRobotsTXT = true
 
