@@ -34,7 +34,7 @@ Below an example with IRIS dataset. First, loading and inspecting the dataset
     </item>
     
     <item>
-      <title>Inner Join, Outter Join, Left Join, Right Join, Row Bind, Column Bind in R</title>
+      <title>Inner Join, Outter Join, Left Join, Right Join, Row Bind and Column Bind in R</title>
       <link>http://adjusted-r.netlify.com/post/merge_in_r/</link>
       <pubDate>Thu, 10 May 2018 21:48:51 -0700</pubDate>
       
