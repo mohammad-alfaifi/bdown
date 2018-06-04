@@ -22,6 +22,9 @@ This blog post shows how to get the beginning (end) of the month (year) observat
 
 **The prerequisite for this short tutorial is to be familiar with data.table package syntax.**
 
+![My picture](images/dt_syn.png)
+
+
 The data loaded below is for the daily adjusted close price of S&P500 over the period between **24 May 2017 to 24 May 2018**. 
  
 
@@ -67,7 +70,7 @@ Let's say that we need the last observation of each month. We may need this kind
 
 library(data.table)
 
-sp500<-as.data.table(sp500) #chaning sp500
+sp500<-as.data.table(sp500) # sp500 as data.table object
 
 last_daymonth_value<- sp500[,.SD[.N],by=.(year_month)] #SD subsets the (.N) or last observation of each month
 
