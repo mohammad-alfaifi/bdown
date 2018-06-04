@@ -44,6 +44,7 @@ enableEmoji=true
 
 	#Enable Twitter Emoji
 	twitterEmoji=true
+	isMobile=true
 
 [social]
 	twitter = "alfaifi_moh" 
