@@ -1,5 +1,5 @@
 ---
-title: "Subseting Daily Time Series Data Using Data.Table Package"
+title: "Subset Daily Time Series Data Using Data.Table Package"
 output: html_document
 date: "2018-05-24T21:48:51-07:00"
 categories: 'R'
