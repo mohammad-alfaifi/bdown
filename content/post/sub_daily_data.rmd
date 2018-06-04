@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
  
 ```
-![](http://adjusted-r.netlify.com/images/timeseries.png)
+![Source:'ectolus.com'](http://adjusted-r.netlify.com/images/timeseries.png)
 
 
 This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data.  In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post. 

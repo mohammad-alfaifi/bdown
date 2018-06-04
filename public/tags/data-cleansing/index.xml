@@ -17,8 +17,8 @@
       <pubDate>Thu, 24 May 2018 21:48:51 -0700</pubDate>
       
       <guid>http://adjusted-r.netlify.com/post/sub_daily_data/</guid>
-      <description>This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.
-The prerequisite for this short tutorial is to be familiar with data.</description>
+      <description>Source:‘ectolus.com’
+ This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.</description>
     </item>
     
     <item>
