@@ -45,8 +45,8 @@ sp500$Date&lt;-as.Date(sp500$Date)
 library(zoo)
 library(lubridate)
 
-sp500$year_month &lt;- as.yearmon(sp500$Date) #add the year month column
-sp500$year &lt;- year(sp500$Date) # adding the year column
+sp500$year_month &lt;- as.yearmon(sp500$Date) #add the year month column from zoo package
+sp500$year &lt;- year(sp500$Date) # adding the year column from lubridate package
 
 head(sp500)</code></pre>
 <pre><code>##         Date Adj.Close year_month year
