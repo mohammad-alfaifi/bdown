@@ -25,6 +25,8 @@ This blog post shows how to get the beginning (end) of the month (year) observat
 ![](http://adjusted-r.netlify.com/images/dt_syn.png)
 
 
+
+
 The data loaded below is for the daily adjusted close price of S&P500 over the period between **24 May 2017 to 24 May 2018**. 
  
 
