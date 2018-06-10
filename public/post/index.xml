@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Adjusted-R</title>
+    <link>http://adjusted-r.netlify.com/post/</link>
+    <description>Recent content in Posts on Adjusted-R</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 May 2018 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="http://adjusted-r.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Subset Daily Time Series Data Using Data.Table Package</title>
+      <link>http://adjusted-r.netlify.com/post/sub_daily_data/</link>
+      <pubDate>Thu, 24 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/post/sub_daily_data/</guid>
+      <description>Source:‘ectolus.com’
+ 
+This blog post shows how to get the beginning (end) of the month (year) observations from daily time series data. In my dissertation, I needed to calculate monthly returns and get the book-value and the market-value of the last day of June and December for different firms to construct Fama-French three-factor model. The easiest way I found to achieve this is through the code shown in this post.</description>
+    </item>
+    
+    <item>
+      <title>The two most important functions for data visualisation in R</title>
+      <link>http://adjusted-r.netlify.com/post/two_func_data_vis/</link>
+      <pubDate>Sun, 13 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/post/two_func_data_vis/</guid>
+      <description>In my opinion, the two most important functions for data visualisation in R are Par and Pairs functions.
+Par Function The first function is par function with mfrow parameter. The par(mfrow=c(rows,columns)) allows us to plot multiple plots on the same page or window.
+Below an example with IRIS dataset. First, loading and inspecting the dataset
+#import libraries library(datasets) #loading iris dataset data(iris) #The first six rows with the four columns head(iris) ## Sepal.</description>
+    </item>
+    
+    <item>
+      <title>Inner Join, Outter Join, Left Join, Right Join, Row Bind and Column Bind in R</title>
+      <link>http://adjusted-r.netlify.com/post/merge_in_r/</link>
+      <pubDate>Thu, 10 May 2018 21:48:51 -0700</pubDate>
+      
+      <guid>http://adjusted-r.netlify.com/post/merge_in_r/</guid>
+      <description>The merge operations is well explained in Pandas documentation for Python but I could not find any documentation that is as good for R. Hence, I am writing this blog :)
+Let’s say we have these two data frames
+#import libraries library(&amp;#39;data.table&amp;#39;) df1&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Rank =c(1,2,3)) df2&amp;lt;-data.frame(Country=c(&amp;#39;US&amp;#39;,&amp;#39;UK&amp;#39;,&amp;quot;New Zealand&amp;quot;),Population =c(300,80,4)) df1 ## Country Rank ## 1 US 1 ## 2 UK 2 ## 3 New Zealand 3 df2 ## Country Population ## 1 US 300 ## 2 UK 80 ## 3 New Zealand 4 Before jumping to merging these two data frames, we can consider adding one data frame to another.</description>
+    </item>
+    
+  </channel>
+</rss>
