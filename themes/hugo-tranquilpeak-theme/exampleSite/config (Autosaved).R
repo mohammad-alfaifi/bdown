@@ -1,6 +1,6 @@
 # Tranquilpeak
 # Version : 0.4.3-BETA
-# Author : Thibaud Leprêtre
+# Author : Thibaud Leprêtre
 
 # I STRONGLY recommend you to use a CDN to speed up loading of pages.
 # There is many free CDN like Cloudinary or you can also use indirectly
@@ -22,7 +22,6 @@ disqusShortname = "adjusted-r"
 paginate = 7
 canonifyurls = true
 
-gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [permalinks]
   post = "/:year/:month/:slug/"
 

@@ -1,6 +1,6 @@
 # Tranquilpeak
 # Version : 0.4.3-BETA
-# Author : Thibaud Leprêtre
+# Author : Thibaud Leprêtre
 
 # I STRONGLY recommend you to use a CDN to speed up loading of pages.
 # There is many free CDN like Cloudinary or you can also use indirectly
@@ -12,17 +12,16 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "http://adjusted-r.netlify.com"
+baseURL = "https://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Adjusted R"
+title = "Hugo tranquilpeak theme"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "adjusted-r"
-# googleAnalytics = "UA-120070920-1"
+disqusShortname = "hugo-tranquilpeak-theme"
+# googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
 
-gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [permalinks]
   post = "/:year/:month/:slug/"
 
@@ -32,19 +31,19 @@ gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   archive = "archives"
 
 [author]
-  name = "Mohammad Alfaifi"
-  bio = "A guy who is passionate about data and quantitative analysis"
-  job = ""
-  location = ""
+  name = "Firstname Lastname"
+  bio = "Super bio with markdown support **COOL**"
+  job = "Your job title"
+  location = "France"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "mohammad.faifi@gmail.com"
+  gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "alfaifi_moh"
+  # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = ""
+  # googlePlus = "+ThibaudLepretre"
 
 # Menu Configuration
 [[menu.main]]
@@ -83,7 +82,20 @@ gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/mohammad-alfaifi"
+  url = "https://github.com/kakawait"
+[[menu.links]]
+  weight = 2
+  identifier = "stackoverflow"
+  name = "Stack Overflow"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+  url = "https://stackoverflow.com/users/636472/kakawait"
+
+[[menu.misc]]
+  weight = 1
+  identifier = "rss"
+  name = "RSS"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
@@ -106,7 +118,7 @@ gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = ""
+  description = "Hugo tranquilpeak theme demo"
 
   # Customization
   # Define the behavior of the sidebar
@@ -184,6 +196,10 @@ gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     icon = "fa-twitter"
     url = "https://twitter.com/intent/tweet?text=%s"
 
+  [[params.sharingOptions]]
+    name = "Google+"
+    icon = "fa-google-plus"
+    url = "https://plus.google.com/share?url=%s"
 
   [params.header.rightLink]
     class = ""
@@ -194,4 +210,6 @@ gnoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # [params.sidebar.profile]
   #   url = "/#about"
 
-
+  # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
+  # [params.footer]
+  #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
